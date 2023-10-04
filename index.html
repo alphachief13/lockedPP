@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 class="titulo">LOCKED++</h1>
+    <h2 class="subtitulo">Gere Uma Combinação</h2>
+    <div class="entrada">
+        <input id="entrada-1" class="boxEntrada" type="number" maxlength="1">
+        <input id="entrada-2" class="boxEntrada" type="number" maxlength="1">        
+        <input id="entrada-3" class="boxEntrada" type="number" maxlength="1">         
+    </div>
+
+
+    <div class="saida">
+        <div id="saida-1" class="box"><span class="material-symbols-outlined">
+            lock_open
+            </span></div>
+        <div id="saida-2" class="box"><span class="material-symbols-outlined">
+            lock_open
+            </span></div>
+        <div id="saida-3" class="box"><span class="material-symbols-outlined">
+            lock_open
+            </span></div>
+
+    </div>
+
+    <div class="buttonArea">
+        <button id="btn-geraComb" onclick="gerarCombinacao()">Gerar Combinação</button>
+        <button id="btn1" onclick="analisarCombinacao()">Analisar Combinação</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
