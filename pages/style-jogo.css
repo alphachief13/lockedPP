@@ -56,7 +56,7 @@ body{
     height: 100vh;
     flex-direction: column;
     margin-top: 0.8vh;
-    background: url("../imgs/fundoLop.png");
+    background: url("../imgs/fundo.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
