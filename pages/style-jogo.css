@@ -1,14 +1,30 @@
 @font-face {
     font-family: 'Gotham Black';
-    src: url('fonts/gothamBlack.otf') format('otf'); 
+    src: url('../fonts/gothamBlack.otf') format('otf'); 
+}
+
+@font-face {
+    font-family: 'Ocr';
+    src: url('../fonts/ocr-a-std.otf'); 
 }
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Ocr', sans-serif;
     color: #e7e8e5;
 }
+
+/* Remove as setas de incremento e decremento de inputs do tipo "number" */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-clear-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
 
 
 /* Estilos para telas pequenas (por exemplo, smartphones) */
@@ -20,7 +36,7 @@
         align-items: center;
         height: 100vh;
         flex-direction: column;
-        background: url("../imgs/fundolop.png");
+        background: url("imgs/fundolop.png");
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
@@ -210,8 +226,8 @@
 }
 
 
-/* Estilos para telas grandes (por exemplo, desktops) */
-@media (min-width: 1025px) {
+  /* Estilos para telas grandes (por exemplo, desktops) */
+  @media (min-width: 1025px) {
     
   
 body{
@@ -221,10 +237,11 @@ body{
     height: 100vh;
     flex-direction: column;
     margin-top: 0.8vh;
-    background: url("imgs/fundolop.png");
+    background: url("../imgs/fundolop.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    transition: background-image 1.3s ease; 
 }
 
 .titulo{
@@ -239,6 +256,45 @@ body{
 
 }
 
+
+.subtitulo2{
+    font-size: 3vh;
+    color: rgb(175, 93, 156);
+    font-weight: 800;
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+    letter-spacing: -0.2vh;
+    margin-top: 1vh;
+}
+
+.entrada{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2vh;
+}
+
+input{
+    font-family: 'Gotham Black', sans-serif;
+    margin: 0.5vh;
+    color: rgb(175, 93, 156);
+    font-size: 8vh;
+    font-weight: bolder;
+    width: 10vh;
+    height: 10vh;
+    text-align: center;
+    border: none;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+    text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 0.5);
+
+}
+
+input:focus{
+    outline-style:solid;
+    outline-width: 0.5vh;
+    outline-color: rgb(175, 93, 156);
+}
+
+
 .buttonArea{
     display: flex;
     justify-content: center;
@@ -250,7 +306,7 @@ body{
     box-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
     letter-spacing: -0.4vh;
     text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 1);
-    margin: 8vh;
+    margin: 1vh;
     margin-bottom: 0;
     height: 6.8vh;
     width: 53vh; 
@@ -260,12 +316,132 @@ body{
     border: none;
     border-radius: 1.2vh;
     font-family: 'Gotham Black', sans-serif;
+}
+
+#btn1{
+    background-color: rgb(175, 93, 156);
+    margin-bottom: 1vh;
 
 }
 
-.buttonArea button:hover{
+#btn1:hover{
     background-color: rgb(145, 53, 123);
+
     cursor: pointer;
+}
+
+#btn-geraComb{
+    background-color: rgb(175, 93, 156);
+}
+
+#btn-geraComb:hover{
+    background-color: rgb(145, 53, 123);
+
+    cursor: pointer;
+}
+
+.saida{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2vh;
+}
+
+.box{
+    color: rgb(175, 93, 156);
+    font-size: 8vh;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10vh;
+    height: 10vh;
+    background-color: white;
+    margin: 0.5vh;
+    text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+    font-family: 'Gotham Black', sans-serif;
+}
+
+
+
+span.material-symbols-outlined{
+    color: rgb(175, 93, 156);
+    font-size: 6vh;
+    text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 1);
+}
+
+.opcoes{
+    font-weight: 800;
+    font-size: 2vh;
+    letter-spacing: -0.1vh;
+    text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 1);
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+    text-align: center;
+
+    position: fixed;
+    left: 6vh;
+    right: 1vh;
+    top: 1vh;
+
+    width: 40vh;
+    min-height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    background-color: rgb(110, 27, 91, 0.2);
+
+    display: none;
+}
+
+
+.linha{
+    display: flex;
+    width: 100%;
+    border: 1px solid rgb(255, 255, 255, 0.2);
+}
+
+.mostrarTentativas{
+    position: fixed;
+    left: 1vh;
+    right: 1vh;
+    top: 1vh;
+    font-weight: 800;
+    font-size: 2vh;
+    letter-spacing: -0.1vh;
+}
+
+.mostrarTentativas p{
+    width: 100%;
+    padding: 1.5vh;
+}
+
+.mostrarTentativas p:hover{
+    background-color: rgb(102, 22, 83);
+    cursor: pointer;
+}
+
+#menu{
+    user-select: none;
+    position: fixed;
+    left: 1vh;
+    right: 1vh;
+    top: 1vh;
+    color: rgb(145, 53, 123);
+    font-size: 5vh;
+    text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 1);
+    cursor: pointer;
+
+}
+
+#menu:hover{
+    color: rgb(102, 22, 83);
+}
+
+.mostrar{
+    display: flex;
 }
 
   }

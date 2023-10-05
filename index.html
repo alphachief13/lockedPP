@@ -6,53 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <title>Document</title>
+    <title>Home</title>
 </head>
 <body>
 
-    <div class="mostrarTentativas">
-        <span onclick="mostrarCombinacoes()" id="menu" class="material-symbols-outlined">
-            menu
-            </span>
-        <div class="opcoes">
-            <p>TENTATIVAS ATUAIS</p>
-            <div class="linha"></div>
-            <p>COMBINAÇÕES</p>
-            <div class="linha"></div>
-            <p>VOLTAR AO INÍCIO</p>
-        </div>    
-    </div>
+
 
     <h1 class="titulo">LOCKED++</h1>
 
     <div class="buttonArea">
-        <button id="btn-geraComb" onclick="gerarCombinacao()">GERE UMA COMBINAÇÃO</button>
-    </div>
-    <div class="entrada">
-        <input id="entrada-1" class="boxEntrada" type="number" maxlength="1">
-        <input id="entrada-2" class="boxEntrada" type="number" maxlength="1">        
-        <input id="entrada-3" class="boxEntrada" type="number" maxlength="1">         
+        <button onclick="entrar()">ENTRAR</button>
     </div>
 
-    <div class="saida">
-        <div id="saida-1" class="box"><span class="material-symbols-outlined">
-            lock_open
-            </span></div>
-        <div id="saida-2" class="box"><span class="material-symbols-outlined">
-            lock_open
-            </span></div>
-        <div id="saida-3" class="box"><span class="material-symbols-outlined">
-            lock_open
-            </span></div>
 
+    <div class="buttonArea">
+        <button onclick="instrucoes()">INSTRUÇÕES</button>
     </div>
 
     <div class="buttonArea">
-        
-        <button id="btn1" onclick="analisarCombinacao()">ANALISAR COMBINAÇÃO</button>
+        <button onclick="">SOBRE</button>
     </div>
-    <h2 class="subtitulo2">TENTATIVAS RESTANTES: 10</h2>
-
 
     <script src="script.js"></script>
 </body>
