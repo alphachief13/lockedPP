@@ -11,20 +11,27 @@
 }
 
 
-/* Estilos para telas pequenas (por exemplo, smartphones) */
+/* Estilos para telas pequenas (por exemplo, smartphones)
 @media (max-width: 768px) {
 
 }
+*/
 
-  /* Estilos para telas médias (por exemplo, tablets) */
-  @media (min-width: 769px) and (max-width: 1024px) {
+
+  /* Estilos para telas médias (por exemplo, tablets) 
+    @media (min-width: 769px) and (max-width: 1024px) {
 
 }
+  */
 
 
-/* Estilos para telas grandes (por exemplo, desktops) */
+
+/* Estilos para telas grandes (por exemplo, desktops) 
 @media (min-width: 1025px) {
-    
+}
+
+*/
+   
   
 body{
     display: flex;
@@ -79,5 +86,3 @@ body{
     background-color: rgb(145, 53, 123);
     cursor: pointer;
 }
-
-  }

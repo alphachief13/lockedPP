@@ -12,21 +12,28 @@
 }
 
 
-/* Estilos para telas pequenas (por exemplo, smartphones) */
+/* Estilos para telas pequenas (por exemplo, smartphones) 
 @media (max-width: 768px) {
 
 }
+*/
 
-  /* Estilos para telas médias (por exemplo, tablets) */
-  @media (min-width: 769px) and (max-width: 1024px) {
+
+  /* Estilos para telas médias (por exemplo, tablets) 
+    @media (min-width: 769px) and (max-width: 1024px) {
 
 }
+  */
 
 
-/* Estilos para telas grandes (por exemplo, desktops) */
+
+/* Estilos para telas grandes (por exemplo, desktops)
 @media (min-width: 1025px) {
     
   
+}
+ */
+
 body{
     display: flex;
     justify-content: center;
@@ -110,6 +117,4 @@ h2{
 .voltar p:hover{
     background-color: rgb(102, 22, 83);
     cursor: pointer;
-}
-
 }

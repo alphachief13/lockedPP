@@ -27,20 +27,27 @@ input[type="number"]::-webkit-clear-button {
 
 
 
-/* Estilos para telas pequenas (por exemplo, smartphones) */
+/* Estilos para telas pequenas (por exemplo, smartphones) 
 @media (max-width: 768px) {
 
 }
+*/
 
-  /* Estilos para telas médias (por exemplo, tablets) */
+
+  /* Estilos para telas médias (por exemplo, tablets) 
   @media (min-width: 769px) and (max-width: 1024px) {
+  }
+  */
 
-}
 
 
-  /* Estilos para telas grandes (por exemplo, desktops) */
-  @media (min-width: 1025px) {
-    
+
+  /* Estilos para telas grandes (por exemplo, desktops) 
+  
+    @media (min-width: 1025px) {
+    }
+    */
+
   
 body{
     display: flex;
@@ -255,5 +262,3 @@ span.material-symbols-outlined{
 .mostrar{
     display: flex;
 }
-
-  }
