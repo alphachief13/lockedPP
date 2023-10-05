@@ -21,7 +21,7 @@ const opcoesEl = document.querySelector(".opcoes");
 
 const imgVenceu = "../imgs/telaVencedora.png"
 const imgPerdeu = "../imgs/telaPerdedora.png"
-const imgDefault = "../imgs/fundoLop.png"
+const imgDefault = "../imgs/fundolop.png"
 
 const fontCadeadoAberto ='<span class="material-symbols-outlined">lock_open</span>'
 const fontCadeadoFechado ='<span class="material-symbols-outlined">lock</span>'
