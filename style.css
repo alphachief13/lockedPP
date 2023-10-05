@@ -4,13 +4,18 @@
     /* Outras propriedades de fonte, como font-weight e font-style, podem ser definidas aqui, se necessário */
 }
 
+@font-face {
+    font-family: 'Gotham Ultra';
+    src: url('fonts/gothamUltra.otf') format('otf');
+}
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Gotham Black', sans-serif; 
-    color: white;
+    color: #e7e8e5;
+
 }
 
 /* Remove as setas de incremento e decremento de inputs do tipo "number" */
@@ -238,26 +243,34 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    transition: background-image 1.3s ease; 
 }
 
 .titulo{
     text-align: center;
-    font-weight: 700;
+    font-weight: 800;
     margin: 0.8vh;
     margin-bottom: 3vh;
-    font-size: 20vh;
+    font-size: 16vh;
+    letter-spacing:  -1.2vh;
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
 }
 
-.subtitulo{
-    font-size: 4vh;
-    margin-bottom: 4vh;
+
+.subtitulo2{
+    font-size: 3vh;
+    color: rgb(175, 93, 156);
+    font-weight: 800;
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+    letter-spacing: -0.2vh;
+    margin-top: 1vh;
 }
 
 .entrada{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 5vh;
+    margin: 2vh;
 }
 
 input{
@@ -269,6 +282,8 @@ input{
     height: 10vh;
     text-align: center;
     border: none;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+    text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 0.5);
 
 }
 
@@ -280,7 +295,6 @@ input:focus{
 
 
 .buttonArea{
-    margin: 3vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -288,20 +302,24 @@ input:focus{
 }
 
 .buttonArea button{
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+    letter-spacing: -0.4vh;
+    text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 1);
     margin: 1vh;
-    color:white;
-    height: 8vh;
-    font-size: 3vh;
-    font-weight: bolder;
+    margin-bottom: 0;
+    height: 6.8vh;
+    width: 53vh; 
+    font-size: 4vh;
+    font-weight: 800;
     background-color: rgb(175, 93, 156);
     border: none;
-    border-radius: 2vh;
-
+    border-radius: 1.2vh;
+    font-family: 'Gotham Ultra', sans-serif;
 }
 
 #btn1{
     background-color: rgb(175, 93, 156);
-    width: 45vh; 
+
 }
 
 #btn1:hover{
@@ -312,7 +330,6 @@ input:focus{
 
 #btn-geraComb{
     background-color: rgb(175, 93, 156);
-    width: 45vh; 
 }
 
 #btn-geraComb:hover{
@@ -325,11 +342,13 @@ input:focus{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 2vh;
 }
 
 .box{
     color: rgb(175, 93, 156);
-    font-size: 6vh;
+    font-size: 8vh;
+    font-weight: bolder;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -337,15 +356,88 @@ input:focus{
     height: 10vh;
     background-color: white;
     margin: 0.5vh;
+    text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
 }
 
-.material-symbols-outlined{
-    color: rgb(175, 93, 156);
-    
-}
+
 
 span.material-symbols-outlined{
+    color: rgb(175, 93, 156);
     font-size: 6vh;
+    text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 1);
+}
+
+.opcoes{
+    font-weight: 800;
+    font-size: 3vh;
+    letter-spacing: -0.1vh;
+    text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 1);
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+    text-align: center;
+
+    position: fixed;
+    left: 6vh;
+    right: 1vh;
+    top: 1vh;
+
+    width: 40vh;
+    min-height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    background-color: rgb(110, 27, 91, 0.2);
+
+    display: none;
+}
+
+.linha{
+    display: flex;
+    width: 100%;
+    border: 1px solid rgb(255, 255, 255, 0.2);
+}
+
+.mostrarTentativas{
+    position: fixed;
+    left: 1vh;
+    right: 1vh;
+    top: 1vh;
+    font-weight: 800;
+    font-size: 2vh;
+    letter-spacing: -0.1vh;
+}
+
+.mostrarTentativas p{
+    width: 100%;
+    padding: 1vh;
+}
+
+.mostrarTentativas p:hover{
+    background-color: rgb(102, 22, 83);
+    cursor: pointer;
+}
+
+#menu{
+    user-select: none;
+    position: fixed;
+    left: 1vh;
+    right: 1vh;
+    top: 1vh;
+    color: rgb(145, 53, 123);
+    font-size: 5vh;
+    text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 1);
+    cursor: pointer;
+
+}
+
+#menu:hover{
+    color: rgb(102, 22, 83);
+}
+
+.mostrar{
+    display: flex;
 }
 
   }

@@ -10,14 +10,29 @@
 </head>
 <body>
 
+    <div class="mostrarTentativas">
+        <span onclick="mostrarCombinacoes()" id="menu" class="material-symbols-outlined">
+            menu
+            </span>
+        <div class="opcoes">
+            <p>TENTATIVAS ATUAIS</p>
+            <div class="linha"></div>
+            <p>COMBINAÇÕES</p>
+            <div class="linha"></div>
+            <p>VOLTAR AO INÍCIO</p>
+        </div>    
+    </div>
+
     <h1 class="titulo">LOCKED++</h1>
-    <h2 class="subtitulo">Gere Uma Combinação</h2>
+
+    <div class="buttonArea">
+        <button id="btn-geraComb" onclick="gerarCombinacao()">GERE UMA COMBINAÇÃO</button>
+    </div>
     <div class="entrada">
         <input id="entrada-1" class="boxEntrada" type="number" maxlength="1">
         <input id="entrada-2" class="boxEntrada" type="number" maxlength="1">        
         <input id="entrada-3" class="boxEntrada" type="number" maxlength="1">         
     </div>
-
 
     <div class="saida">
         <div id="saida-1" class="box"><span class="material-symbols-outlined">
@@ -33,9 +48,11 @@
     </div>
 
     <div class="buttonArea">
-        <button id="btn-geraComb" onclick="gerarCombinacao()">Gerar Combinação</button>
-        <button id="btn1" onclick="analisarCombinacao()">Analisar Combinação</button>
+        
+        <button id="btn1" onclick="analisarCombinacao()">ANALISAR COMBINAÇÃO</button>
     </div>
+    <h2 class="subtitulo2">TENTATIVAS RESTANTES: 10</h2>
+
 
     <script src="script.js"></script>
 </body>
