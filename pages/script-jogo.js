@@ -58,6 +58,13 @@ function recuperaDados(){
 let possiveisLogs = ["COMBINAÇÃO INCORRETA", "COMBINAÇÃO CORRETA", "COMBINAÇÃO INVÁLIDA", "DIGITE UMA COMBINAÇÃO (0-9)", "VOCÊ ACERTOU UM NÚMERO"];
 let coresLogs = ["#ff0000","#00ff00","#ff0000","#e7e8e5", "#00ff00"];
 
+function carregarTodosFundos(){
+    const body = document.body;
+    atualizaBackground(imgPerdeu);
+    atualizaBackground(imgVenceu);
+    atualizaBackground(imgDefault);
+}
+
 function atualizaLockScore(){
     localStorage.setItem('lockScore', lockScore);
     lockScoreEl.innerHTML = "LOCKSCORE: " + lockScore;
