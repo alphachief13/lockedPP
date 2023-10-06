@@ -302,22 +302,7 @@ span.material-symbols-outlined{
     cursor: pointer;
 }
 
-#storeIcon{
-    user-select: none;
-    position: fixed;
-    left: 1vh;
-    top: 6vh;
-    width: 7vh;
-    color: rgb(145, 53, 123);
-    font-size: 5vh;
-    text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 1);
-    cursor: pointer;
-}
 
-#storeIcon:hover{
-    color: rgb(102, 22, 83);
-
-}
 #menu:hover{
     color: rgb(102, 22, 83);
 }
@@ -368,19 +353,46 @@ span.material-symbols-outlined{
 }
 
 .pontuacao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: fixed;
     right: 2vh;
     top: 2vh;
 }
 
+.text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 #lockscore{
+    font-size: 2vh;
     margin: 0.5vh;
+    display: flex;
 }
 
 #lockcoin{
+    font-size: 2vh;
     margin: 0.5vh;
+    display: flex;
 }
 
+#storeIcon{
+    user-select: none;
+    width: 7vh;
+    color: rgb(255, 255, 255);
+    font-size: 7vh;
+    text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 1);
+    cursor: pointer;
+}
+
+#storeIcon:hover{
+    color: rgb(218, 196, 212);
+
+}
 
 /*JOGO TODO*/
 .faseJogo{

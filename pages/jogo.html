@@ -11,12 +11,16 @@
 <body>
 
     <div class="pontuacao">
-        <p id="lockscore">LOCKSCORE: 0</p>
-        <p id="lockcoin">LOCKCOINS: 0</p>
+        <span id="storeIcon" class="material-symbols-outlined">store</span>
+
+        <div class="text">
+            <p id="lockscore">LOCKSCORE: 0</p>
+            <p id="lockcoin">LOCKCOINS: 0</p>
+        </div>
+
     </div>
 
     <div class="mostrarTentativas">
-        <span id="storeIcon" class="material-symbols-outlined">store</span>
 
         <span onclick="mostrarCombinacoes()" id="menu" class="material-symbols-outlined">
             menu
@@ -72,7 +76,7 @@
 
     <div class="faseRespostaVenceu">
         <h2>VOCÊ GANHOU!</h2>
-        <h3>LOCKSCORE:</h3>
+        <h3 id="mostraLockScore">LOCKSCORE: </h3>
 
         <div class="saida">
             <div id="saida-1" class="box3"><span class="material-symbols-outlined">
@@ -88,7 +92,7 @@
         </div>
 
         <div class="buttonArea">
-            <button onclick="voltaMain()">PARAR E CONVERTER SCORE EM MOEDAS</button>
+            <button onclick="voltaMain()">PARAR E CONVERTER SCORE EM COINS</button>
             <button onclick="voltaMain()">MULTIPLICAR SCORE NA PROXIMA RODADA</button>
         </div>
 

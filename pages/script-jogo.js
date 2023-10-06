@@ -21,7 +21,7 @@ const lockScoreEl = document.querySelector("#lockscore");
 const lockCoinEl = document.querySelector("#lockcoin");
 const boxSaida2 = document.querySelectorAll(".box2");
 const boxSaida3 = document.querySelectorAll(".box3");
-
+const mostrarLockScore = document.querySelector("#mostraLockScore");
 
 const telaMain = document.querySelector(".faseJogo");
 const telaVitoria = document.querySelector(".faseRespostaVenceu");
@@ -44,6 +44,7 @@ let numCorretos = [];
 let acertouUmNum = false;
 let emTelaMain = true;
 
+
 let lockScore = 0;
 let lockCoin = 0;
 recuperaDados();
@@ -59,7 +60,6 @@ let possiveisLogs = ["COMBINAÇÃO INCORRETA", "COMBINAÇÃO CORRETA", "COMBINA�
 let coresLogs = ["#ff0000","#00ff00","#ff0000","#e7e8e5", "#00ff00"];
 
 function carregarTodosFundos(){
-    const body = document.body;
     atualizaBackground(imgPerdeu);
     atualizaBackground(imgVenceu);
     atualizaBackground(imgDefault);
@@ -68,6 +68,7 @@ function carregarTodosFundos(){
 function atualizaLockScore(){
     localStorage.setItem('lockScore', lockScore);
     lockScoreEl.innerHTML = "LOCKSCORE: " + lockScore;
+    mostrarLockScore.innerHTML = "LOCKSCORE: " + lockScore;
 }
 
 function atualizaLockCoin(){
@@ -325,7 +326,7 @@ function ganhou(){
     mostraTelaVitoria();
 
     if(tentativas == 4){
-        lockScore = 1000;
+        lockScore += 1000;
         atualizaLockScore();
     } else{
         lockScore += 25 * tentativas;
