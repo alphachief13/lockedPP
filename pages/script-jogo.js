@@ -19,6 +19,14 @@ const subtitulo3 = document.querySelector(".subtitulo3");
 const voltarMenu = document.querySelector("#voltarMenu");
 const lockScoreEl = document.querySelector("#lockscore");
 const lockCoinEl = document.querySelector("#lockcoin");
+const boxSaida2 = document.querySelectorAll(".box2");
+const boxSaida3 = document.querySelectorAll(".box3");
+
+
+const telaMain = document.querySelector(".faseJogo");
+const telaVitoria = document.querySelector(".faseRespostaVenceu");
+const telaDerrota = document.querySelector(".faseRespostaPerdeu");
+
 
 const imgVenceu = "../imgs/telaVencedora.png"
 const imgPerdeu = "../imgs/telaPerdedora.png"
@@ -34,6 +42,7 @@ let emJogo = false;
 let tentativas = 0;
 let numCorretos = [];
 let acertouUmNum = false;
+let emTelaMain = true;
 
 let lockScore = 0;
 let lockCoin = 0;
@@ -58,6 +67,42 @@ function atualizaLockCoin(){
     localStorage.setItem('lockCoin', lockCoin);
     lockCoinEl.innerHTML = "LOCKCOINS: " + lockCoin;
 }
+
+function mostraTelaVitoria(){
+    telaMain.style.display = "none";
+    telaVitoria.style.display = "flex" ;
+    emTelaMain = false;
+}
+
+function mostraTelaDerrota(){
+    telaMain.style.display = "none";
+    telaDerrota.style.display = "flex" ;
+    emTelaMain = false;
+}
+
+function voltaMain(){
+    telaVitoria.style.display = "none" ;
+    telaDerrota.style.display = "none" ;
+    telaMain.style.display = "flex";
+    emTelaMain = true;
+    
+    comecarJogo();
+}
+
+function mostraSaidaTela2(){
+    for(let i = 0; i < boxSaida.length; i++){
+        boxSaida2[i].innerHTML = combinacaoSaida[i];
+    }
+
+}
+
+function mostraSaidaTela3(){
+    for(let i = 0; i < boxSaida.length; i++){
+        boxSaida3[i].innerHTML = combinacaoSaida[i];
+    }
+
+}
+
 
 function mostraMenuVoltarOuVolta(){
     if(emJogo){
@@ -172,6 +217,7 @@ function atualizaElementosDomAoIniciar(){
 }
 
 function comecarJogo(){
+    emTelaMain = true;
     //reinicia a combinacao de numeros que são corretos na entrada
     numCorretos = [];
     //fala que o jogo começou
@@ -246,6 +292,12 @@ function perdeu(){
     loseSound.play();
     //mostra os numeros da combinacao
     mostraNumeros();
+    //mostra saida das telas que mostram derrota ou vitoria
+    mostraSaidaTela2();
+    mostraSaidaTela3();
+
+    //
+    mostraTelaDerrota();
 }
 
 function ganhou(){
@@ -259,6 +311,11 @@ function ganhou(){
     atualizaBackground(imgVenceu);
     //mostra os numeros da combinacao
     mostraNumeros();
+    //mostra saida das telas que mostram derrota ou vitoria
+    mostraSaidaTela2();
+    mostraSaidaTela3();
+    //
+    mostraTelaVitoria();
 
     if(tentativas == 4){
         lockScore = 1000;
@@ -364,7 +421,7 @@ boxEntrada.forEach((input, index) => {
 })
 
 document.addEventListener('keydown', function(event){
-    if(event.key === "Enter"){
+    if(event.key === "Enter" && emTelaMain){
         if(!(btnAnalisarCombinacao.disabled)){
             analisarCombinacao();
         } else if(!(btnGeraCombinacao.disabled)){

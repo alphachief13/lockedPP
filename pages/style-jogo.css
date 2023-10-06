@@ -198,7 +198,39 @@ input:focus{
     border-radius: 1vh;
 }
 
+.box2{
+    color: #ff0000;
+    font-size: 8vh;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10vh;
+    height: 10vh;
+    background-color: white;
+    margin: 0.5vh;
+    text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+    font-family: 'Gotham Black', sans-serif;
+    border-radius: 1vh;
+}
 
+.box3{
+    color: #00ff00;
+    font-size: 8vh;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10vh;
+    height: 10vh;
+    background-color: white;
+    margin: 0.5vh;
+    text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+    font-family: 'Gotham Black', sans-serif;
+    border-radius: 1vh;
+}
 
 span.material-symbols-outlined{
     color: rgb(175, 93, 156);
@@ -402,6 +434,11 @@ span.material-symbols-outlined{
     border-radius: 1.2vh;
     font-family: 'Gotham Black', sans-serif;
     color: black;
+    cursor: pointer;
+}
+
+.faseRespostaVenceu button:hover{
+    background-color: rgb(212, 195, 195);
 
 }
 
@@ -449,5 +486,10 @@ span.material-symbols-outlined{
     border-radius: 1.2vh;
     font-family: 'Gotham Black', sans-serif;
     color: black;
+    cursor: pointer;
+}
+
+.faseRespostaPerdeu button:hover{
+    background-color: rgb(212, 195, 195);
 
 }
