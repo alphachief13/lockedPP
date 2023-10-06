@@ -1,9 +1,6 @@
 //ainda falta corrigir cores ao acertar
-//mostrar logs de respostas
 //fazer o sistema de score
 //fazer a pagina sobre
-//fazer as tentativas e combinacoes
-//rever alguns designs
 
 
 
@@ -18,6 +15,10 @@ const boxSaida = document.querySelectorAll(".box");
 const subtitulo2 = document.querySelector(".subtitulo2");
 const menu = document.querySelector("#menu");
 const opcoesEl = document.querySelector(".opcoes");
+const subtitulo3 = document.querySelector(".subtitulo3");
+const voltarMenu = document.querySelector("#voltarMenu");
+const lockScoreEl = document.querySelector("#lockscore");
+const lockCoinEl = document.querySelector("#lockcoin");
 
 const imgVenceu = "../imgs/telaVencedora.png"
 const imgPerdeu = "../imgs/telaPerdedora.png"
@@ -32,9 +33,51 @@ let jogadas = 0;
 let emJogo = false;
 let tentativas = 0;
 let numCorretos = [];
+let acertouUmNum = false;
 
-function voltarAoInicio(){
+let lockScore = 0;
+let lockCoin = 0;
+recuperaDados();
+
+function recuperaDados(){
+    lockScore = Number(localStorage.getItem('lockScore'));
+    lockCoin = Number(localStorage.getItem('lockCoin'));
+    atualizaLockScore();
+    atualizaLockCoin();
+}
+
+let possiveisLogs = ["COMBINAÇÃO INCORRETA", "COMBINAÇÃO CORRETA", "COMBINAÇÃO INVÁLIDA", "DIGITE UMA COMBINAÇÃO (0-9)", "VOCÊ ACERTOU UM NÚMERO"];
+let coresLogs = ["#ff0000","#00ff00","#ff0000","#e7e8e5", "#00ff00"];
+
+function atualizaLockScore(){
+    localStorage.setItem('lockScore', lockScore);
+    lockScoreEl.innerHTML = "LOCKSCORE: " + lockScore;
+}
+
+function atualizaLockCoin(){
+    localStorage.setItem('lockCoin', lockCoin);
+    lockCoinEl.innerHTML = "LOCKCOINS: " + lockCoin;
+}
+
+function mostraMenuVoltarOuVolta(){
+    if(emJogo){
+        voltarMenu.style.display = "flex";
+    } else{
+        window.location.href = "../index.html";
+    }
+}
+
+function voltarJogo(){
+       voltarMenu.style.display = "none"
+}
+
+function voltarInicio(){
     window.location.href = "../index.html";
+}
+
+function atualizarLogSub3(i){
+    subtitulo3.innerHTML = possiveisLogs[i];
+    subtitulo3.style.color = coresLogs[i];
 }
 
 function atualizaBackground(src){
@@ -108,6 +151,8 @@ function abreCadeados(){
 function atualizaElementosDomAoIniciar(){
         //atualiza o numero de tentativas no inicio
         atualizaTentativasSubtitulo();
+        //atualiza log do subtitulo
+        atualizarLogSub3(3);
         //retorna ao background default
         atualizaBackground(imgDefault);
         //faz som de tranca
@@ -132,7 +177,7 @@ function comecarJogo(){
     //fala que o jogo começou
     emJogo = true;
     //reinicia o numero de tentativas
-    tentativas = 10;
+    tentativas = 5;
     atualizaElementosDomAoIniciar();
     //gera a combinação e guarda na variavel global que guarda a combinacao correta
     combinacaoSaida = gerarCombinacao();
@@ -214,6 +259,16 @@ function ganhou(){
     atualizaBackground(imgVenceu);
     //mostra os numeros da combinacao
     mostraNumeros();
+
+    if(tentativas == 4){
+        lockScore = 1000;
+        atualizaLockScore();
+    } else{
+        lockScore += 25 * tentativas;
+        atualizaLockScore();
+    }
+
+
 }
 
 function mostraNumeros(){
@@ -229,18 +284,27 @@ function analisarCombinacao(){
     if(analiseValida){
         combinacoesSaoIguais = testarCombinacaoAtual();
 
-        if(tentativas == 0 && emJogo){
-            perdeu()
-        }
+        
 
         if(combinacoesSaoIguais){
+            atualizarLogSub3(1)
             ganhou();
-        } else{
-            console.log("combinação atual é incorreta")
+        } else if(tentativas == 0 && emJogo){
+            atualizarLogSub3(0);
+            perdeu()
+        }
+        else{
+            if(acertouUmNum && emJogo){
+                atualizarLogSub3(4);
+
+            } else{
+                atualizarLogSub3(0);
+
+            }
         }
 
     } else{
-        console.log("entrada atual é invalida")
+        atualizarLogSub3(2);
     }
 
 
@@ -250,15 +314,30 @@ function verificarSeNumeroEstaCerto(entrada, saida){
     //para cada item da entrada
     for(let i = 0; i < entrada.length; i++){
         //caso o item for correspondente a saida e esse numero nao esteja no numeros corretos
-        if(entrada[i] == saida[i] && !(numCorretos.includes(entrada[i]))){
+        if(entrada[i] == saida[i]){
             //o numero entra no lugar do cadeado
             boxSaida[i].innerHTML = entrada[i];
+
+            if(!(numCorretos.includes(entrada[i]))){
+                //som de cadeado desbloqueado toca caso o numero não tenha sido descoberto ainda
+                atualizarLogSub3(4);
+                unlockedSound.play();
+                acertouUmNum = true;
+
+            } else{
+                acertouUmNum = false;
+            }
+
             //envia o numero a lista de corretos
             numCorretos.push(entrada[i]);
-            //som de cadeado desbloqueado toca
-            unlockedSound.play();
+        } else{
+            boxSaida[i].innerHTML = fontCadeadoFechado;
         }
     }
+
+
+
+
 }
 
 
@@ -282,6 +361,16 @@ boxEntrada.forEach((input, index) => {
         boxEntrada[index + 1].focus();
     }
     })
+})
+
+document.addEventListener('keydown', function(event){
+    if(event.key === "Enter"){
+        if(!(btnAnalisarCombinacao.disabled)){
+            analisarCombinacao();
+        } else if(!(btnGeraCombinacao.disabled)){
+            comecarJogo();
+        }
+    }
 })
 
 atualizaTentativasSubtitulo();

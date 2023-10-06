@@ -73,6 +73,8 @@ body{
     text-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
     font-family: 'Gotham Black', sans-serif;
 
+
+
 }
 
 
@@ -83,7 +85,19 @@ body{
     text-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
     letter-spacing: -0.2vh;
     margin-top: 1vh;
+    text-align: center;
 }
+
+.subtitulo3{
+    font-size: 3vh;
+    color: #e7e8e5;
+    font-weight: 800;
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+    letter-spacing: -0.2vh;
+    margin-bottom: 1vh;
+    text-align: center;
+}
+
 
 .entrada{
     display: flex;
@@ -102,9 +116,10 @@ input{
     height: 10vh;
     text-align: center;
     border: none;
+    border-radius: 1vh;
     box-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
     text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 0.5);
-
+    background-color: white;
 }
 
 input:focus{
@@ -180,6 +195,7 @@ input:focus{
     text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 0.5);
     box-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
     font-family: 'Gotham Black', sans-serif;
+    border-radius: 1vh;
 }
 
 
@@ -246,19 +262,192 @@ span.material-symbols-outlined{
     user-select: none;
     position: fixed;
     left: 1vh;
-    right: 1vh;
     top: 1vh;
+    width: 7vh;
     color: rgb(145, 53, 123);
     font-size: 5vh;
     text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 1);
     cursor: pointer;
-
 }
 
+#storeIcon{
+    user-select: none;
+    position: fixed;
+    left: 1vh;
+    top: 6vh;
+    width: 7vh;
+    color: rgb(145, 53, 123);
+    font-size: 5vh;
+    text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 1);
+    cursor: pointer;
+}
+
+#storeIcon:hover{
+    color: rgb(102, 22, 83);
+
+}
 #menu:hover{
     color: rgb(102, 22, 83);
 }
 
 .mostrar{
     display: flex;
+}
+
+.voltar{
+    position: fixed;
+    width: 100vh;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url("../imgs/fundo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: none;
+}
+
+.voltar h2{
+    margin-bottom: 5vh;
+    text-align: center;
+}
+
+.voltar button{
+    letter-spacing: -0.4vh;
+    border: none;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+    text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 1);
+    margin: 2vh;
+    height: 8vh;
+    width: 50vh; 
+    font-size: 3vh;
+    font-weight: 800;
+    background-color: rgb(145, 53, 123, 0.5);
+    border-radius: 1.2vh;
+    font-family: 'Ocr', sans-serif;
+    cursor: pointer;
+}
+
+.voltar button:hover{
+    background-color: rgb(102, 22, 83, 0.5);
+
+}
+
+.pontuacao{
+    position: fixed;
+    right: 2vh;
+    top: 2vh;
+}
+
+#lockscore{
+    margin: 0.5vh;
+}
+
+#lockcoin{
+    margin: 0.5vh;
+}
+
+
+/*JOGO TODO*/
+.faseJogo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+/*PARTE DA VITORIA*/
+.faseRespostaVenceu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+}
+
+.faseRespostaVenceu h2{
+    color: #00ff00;
+    font-weight: 800;
+    font-size: 8vh;
+    letter-spacing:  -0.5vh;
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+    font-family: 'Gotham Black', sans-serif;
+    text-align: center;
+}
+
+.faseRespostaVenceu h3{
+    text-align: center;
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.6);   
+    font-size: 3vh;
+    font-family: 'Gotham Black', sans-serif;
+    font-size: 4vh;
+    
+}
+
+.faseRespostaVenceu button{
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+    text-shadow: -0.1px 0.1px 2px rgba(0, 0, 0, 0.5);
+    letter-spacing: -0.2vh;
+    margin: 2vh;
+    margin-bottom: 0;
+    height: 10vh;
+    width: 80vh; 
+    font-size: 3.5vh;
+    font-weight: 800;
+    background-color: white;
+    border: none;
+    border-radius: 1.2vh;
+    font-family: 'Gotham Black', sans-serif;
+    color: black;
+
+}
+
+.faseRespostaVenceu span{
+    color: #00ff00;
+
+}
+
+
+/*parte da derrota*/
+.faseRespostaPerdeu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+}
+
+.faseRespostaPerdeu span{
+    color: #ff0000;
+}
+
+.faseRespostaPerdeu h1{
+    color: #ff0000;
+    font-weight: 800;
+    font-size: 8vh;
+    letter-spacing:  -0.5vh;
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+    font-family: 'Gotham Black', sans-serif;
+    text-align: center;
+}
+
+.faseRespostaPerdeu button{
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+    letter-spacing: -0.2vh;
+    text-shadow: -0.1px 0.1px 2px rgba(0, 0, 0, 0.5);
+    margin: 2vh;
+    margin-bottom: 0;
+    height: 10vh;
+    width: 80vh; 
+    font-size: 3.5vh;
+    font-weight: 800;
+    background-color: white;
+    border: none;
+    border-radius: 1.2vh;
+    font-family: 'Gotham Black', sans-serif;
+    color: black;
+
 }

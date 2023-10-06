@@ -10,49 +10,108 @@
 </head>
 <body>
 
+    <div class="pontuacao">
+        <p id="lockscore">LOCKSCORE: 0</p>
+        <p id="lockcoin">LOCKCOINS: 0</p>
+    </div>
+
     <div class="mostrarTentativas">
+        <span id="storeIcon" class="material-symbols-outlined">store</span>
+
         <span onclick="mostrarCombinacoes()" id="menu" class="material-symbols-outlined">
             menu
             </span>
         <div class="opcoes">
-            <p id="tentAtual">TENTATIVAS ATUAIS</p>
+            <p id="tentAtual">PERFIL</p>
             <div class="linha"></div>
             <p>COMBINAÇÕES</p>
             <div class="linha"></div>
-            <p onclick="voltarAoInicio()">VOLTAR AO INÍCIO</p>
+            <p onclick="mostraMenuVoltarOuVolta()">VOLTAR AO INÍCIO</p>
         </div>    
+    </div>
+
+    <div id="voltarMenu" class="voltar">
+        <h2>JOGO EM ANDAMENTO, VOCê QUER MESMO VOLTAR?</h2>
+        <button onclick="voltarJogo()">VOLTAR AO JOGO</button>
+        <button onclick="voltarInicio()">VOLTAR AO INICIO</button>
     </div>
 
     <h1 class="titulo">LOCKED++</h1>
 
-    <div class="buttonArea">
-        <button id="btn-geraComb" onclick="comecarJogo()">GERE UMA COMBINAÇÃO</button>
-    </div>
-    <div class="entrada">
-        <input id="entrada-1" class="boxEntrada" type="number" maxlength="1">
-        <input id="entrada-2" class="boxEntrada" type="number" maxlength="1">        
-        <input id="entrada-3" class="boxEntrada" type="number" maxlength="1">         
+    <div class="faseJogo">
+        <h2 class="subtitulo3">DIGITE UMA COMBINAÇÃO (0-9)</h2>
+
+        <div class="buttonArea">
+            <button id="btn-geraComb" onclick="comecarJogo()">GERE UMA COMBINAÇÃO</button>
+        </div>
+        <div class="entrada">
+            <input id="entrada-1" class="boxEntrada" type="number" maxlength="1">
+            <input id="entrada-2" class="boxEntrada" type="number" maxlength="1">        
+            <input id="entrada-3" class="boxEntrada" type="number" maxlength="1">         
+        </div>
+    
+        <div class="saida">
+            <div id="saida-1" class="box"><span class="material-symbols-outlined">
+                lock_open
+                </span></div>
+            <div id="saida-2" class="box"><span class="material-symbols-outlined">
+                lock_open
+                </span></div>
+            <div id="saida-3" class="box"><span class="material-symbols-outlined">
+                lock_open
+                </span></div>
+    
+        </div>
+    
+        <div class="buttonArea">
+            
+            <button id="btn1" onclick="analisarCombinacao()">ANALISAR COMBINAÇÃO</button>
+        </div>
+        <h2 class="subtitulo2">TENTATIVAS RESTANTES: 5</h2>
     </div>
 
-    <div class="saida">
-        <div id="saida-1" class="box"><span class="material-symbols-outlined">
-            lock_open
-            </span></div>
-        <div id="saida-2" class="box"><span class="material-symbols-outlined">
-            lock_open
-            </span></div>
-        <div id="saida-3" class="box"><span class="material-symbols-outlined">
-            lock_open
-            </span></div>
+    <div class="faseRespostaVenceu">
+        <h2>VOCÊ GANHOU!</h2>
+        <h3>LOCKSCORE:</h3>
+
+        <div class="saida">
+            <div id="saida-1" class="box"><span class="material-symbols-outlined">
+                lock_open
+                </span></div>
+            <div id="saida-2" class="box"><span class="material-symbols-outlined">
+                lock_open
+                </span></div>
+            <div id="saida-3" class="box"><span class="material-symbols-outlined">
+                lock_open
+                </span></div>
+    
+        </div>
+
+        <div class="buttonArea">
+            <button>PARAR E CONVERTER SCORE EM MOEDAS</button>
+            <button>MULTIPLICAR SCORE NA PROXIMA RODADA</button>
+        </div>
 
     </div>
 
-    <div class="buttonArea">
-        
-        <button id="btn1" onclick="analisarCombinacao()">ANALISAR COMBINAÇÃO</button>
-    </div>
-    <h2 class="subtitulo2">TENTATIVAS RESTANTES: 10</h2>
+    <div class="faseRespostaPerdeu">
+        <h1>VOCÊ PERDEU!</h1>
+        <div class="saida">
+            <div id="saida-1" class="box"><span class="material-symbols-outlined">
+                lock_open
+                </span></div>
+            <div id="saida-2" class="box"><span class="material-symbols-outlined">
+                lock_open
+                </span></div>
+            <div id="saida-3" class="box"><span class="material-symbols-outlined">
+                lock_open
+                </span></div>
+        </div>
 
+        <div class="buttonArea">
+            <button>VOLTAR PARA UMA NOVA COMBINAÇÃO</button>
+        </div>
+    </div>
 
     <script src="script-jogo.js"></script>
 </body>
