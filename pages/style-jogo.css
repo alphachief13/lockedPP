@@ -397,9 +397,9 @@ span.material-symbols-outlined{
 
 #lockCoinId{
     margin-left: 1vh;
-    margin-top: 2.5vh;
-    width: 4vh;
-    height: 4vh;
+    margin-top: 3.2vh;
+    width: 3vh;
+    height: 3vh;
 }
 
 
@@ -514,3 +514,12 @@ span.material-symbols-outlined{
     background-color: rgb(212, 195, 195);
 
 }
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+

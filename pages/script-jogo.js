@@ -251,7 +251,7 @@ function comecarJogo(){
     atualizaElementosDomAoIniciar();
     //gera a combinação e guarda na variavel global que guarda a combinacao correta
     combinacaoSaida = gerarCombinacao();
-
+    boxEntrada[0].focus();
 }
 
 function gerarCombinacao(){
@@ -439,15 +439,20 @@ function verificarSeNumeroEstaCerto(entrada, saida){
 
 
 //sistema de foco e seleção das caixas
+
 boxEntrada.forEach((input, index) => {
     input.addEventListener('input', function() {
-    if (this.value.length === this.maxLength) {
-        if (index < boxEntrada.length - 1) {
+        if (this.value.length > 1) {
+            // Se o valor tiver mais de 1 caractere, limite-o a 1 caractere
+            this.value = this.value.substring(0, 1);
+        }
+        
+        if (this.value.length === 1 && index < boxEntrada.length - 1) {
+            // Se o valor tiver 1 caractere e houver mais inputs à direita, mova o foco para o próximo input
             boxEntrada[index + 1].focus();
         }
-      }
-    })
-})
+    });
+});
 boxEntrada.forEach((input, index) => {
     input.addEventListener('keydown', function(event) {
     if (event.key === 'a' && index > 0){
@@ -456,8 +461,11 @@ boxEntrada.forEach((input, index) => {
 
     } else if (event.key === 'd' && index < boxEntrada.length - 1) {
         boxEntrada[index + 1].focus();
+    } else if(event.key === "Backspace" && boxEntrada[index].value.length < 2 && index > 0){
+       setTimeout(()=>{boxEntrada[index - 1].focus();}, 1)
+       
     }
-    })
+})
 })
 
 document.addEventListener('keydown', function(event){
@@ -470,6 +478,8 @@ document.addEventListener('keydown', function(event){
     }
 })
 
+
+
 atualizaTentativasSubtitulo();
 desativaBotao(btnAnalisarCombinacao);
-//carregarTodosFundos();
+carregarTodosFundos();
