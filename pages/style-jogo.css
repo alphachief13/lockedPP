@@ -296,7 +296,7 @@ span.material-symbols-outlined{
     left: 1vh;
     top: 1vh;
     width: 7vh;
-    color: rgb(145, 53, 123);
+    color: white;
     font-size: 5vh;
     text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 1);
     cursor: pointer;
@@ -357,42 +357,51 @@ span.material-symbols-outlined{
     justify-content: center;
     align-items: center;
     position: fixed;
-    right: 2vh;
+    right: 6vh;
     top: 2vh;
 }
 
 .text{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     flex-direction: column;
 }
 
 #lockscore{
-    font-size: 2vh;
+    font-size: 2.5vh;
     margin: 0.5vh;
     display: flex;
 }
 
 #lockcoin{
-    font-size: 2vh;
+    font-size: 2.5vh;
     margin: 0.5vh;
     display: flex;
 }
 
 #storeIcon{
     user-select: none;
-    width: 7vh;
-    color: rgb(255, 255, 255);
-    font-size: 7vh;
+    width: 12vh;
+    color: white;
     text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 1);
     cursor: pointer;
+    margin-bottom: 1.3vh;
 }
 
-#storeIcon:hover{
-    color: rgb(218, 196, 212);
-
+.lockCoinsIcon{
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
+
+#lockCoinId{
+    margin-left: 1vh;
+    margin-top: 2.5vh;
+    width: 4vh;
+    height: 4vh;
+}
+
 
 /*JOGO TODO*/
 .faseJogo{

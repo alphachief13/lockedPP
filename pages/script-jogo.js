@@ -472,4 +472,4 @@ document.addEventListener('keydown', function(event){
 
 atualizaTentativasSubtitulo();
 desativaBotao(btnAnalisarCombinacao);
-carregarTodosFundos();
+//carregarTodosFundos();
