@@ -27,27 +27,972 @@ input[type="number"]::-webkit-clear-button {
 
 
 
-/* Estilos para telas pequenas (por exemplo, smartphones) 
+/* Estilos para telas pequenas (por exemplo, smartphones) */
 @media (max-width: 768px) {
+      
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    margin-top: 0.8vh;
+    background: url("../imgs/fundo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    transition: background-image 1.3s ease; 
+}
+
+.titulo{
+    text-align: center;
+    font-weight: 800;
+    margin: 0.8vh;
+    margin-bottom: 3vh;
+    font-size: 8.5vh;
+    letter-spacing:  -1.2vh;
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+    font-family: 'Gotham Black', sans-serif;
 
 }
-*/
 
 
-  /* Estilos para telas médias (por exemplo, tablets) 
-  @media (min-width: 769px) and (max-width: 1024px) {
-  }
-  */
+.subtitulo2{
+    font-size: 2vh;
+    color: rgb(175, 93, 156);
+    font-weight: 800;
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+    letter-spacing: -0.2vh;
+    margin-top: 1vh;
+    text-align: center;
+}
+
+.subtitulo3{
+    font-size: 2vh;
+    color: #e7e8e5;
+    font-weight: 800;
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+    letter-spacing: -0.2vh;
+    margin-bottom: 1vh;
+    text-align: center;
+}
+
+
+.entrada{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2vh;
+}
+
+input{
+    font-family: 'Gotham Black', sans-serif;
+    margin: 0.5vh;
+    color: rgb(175, 93, 156);
+    font-size: 6vh;
+    font-weight: bolder;
+    width: 9vh;
+    height: 9vh;
+    text-align: center;
+    border: none;
+    border-radius: 1vh;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+    text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 0.5);
+    background-color: white;
+}
+
+input:focus{
+    outline-style:solid;
+    outline-width: 0.5vh;
+    outline-color: rgb(175, 93, 156);
+}
+
+
+.buttonArea{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.buttonArea button{
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+    letter-spacing: -0.4vh;
+    text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 1);
+    margin: 1vh;
+    margin-bottom: 0;
+    height: 6.5vh;
+    width: 40vh; 
+    font-size: 3vh;
+    font-weight: 800;
+    background-color: rgb(175, 93, 156);
+    border: none;
+    border-radius: 1.2vh;
+    font-family: 'Gotham Black', sans-serif;
+}
+
+#btn1{
+    background-color: rgb(175, 93, 156);
+    margin-bottom: 1vh;
+
+}
+
+#btn1:hover{
+    background-color: rgb(145, 53, 123);
+
+    cursor: pointer;
+}
+
+#btn-geraComb{
+    background-color: rgb(175, 93, 156);
+}
+
+#btn-geraComb:hover{
+    background-color: rgb(145, 53, 123);
+
+    cursor: pointer;
+}
+
+.saida{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2vh;
+}
+
+.box{
+    color: rgb(175, 93, 156);
+    font-size: 6vh;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 9vh;
+    height: 9vh;
+    background-color: white;
+    margin: 0.5vh;
+    text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+    font-family: 'Gotham Black', sans-serif;
+    border-radius: 1vh;
+}
+
+.box2{
+    color: #ff0000;
+    font-size: 8vh;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 9vh;
+    height: 9vh;
+    background-color: white;
+    margin: 0.5vh;
+    text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+    font-family: 'Gotham Black', sans-serif;
+    border-radius: 1vh;
+}
+
+.box3{
+    color: #00ff00;
+    font-size: 8vh;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 9vh;
+    height: 9vh;
+    background-color: white;
+    margin: 0.5vh;
+    text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+    font-family: 'Gotham Black', sans-serif;
+    border-radius: 1vh;
+}
+
+span.material-symbols-outlined{
+    color: rgb(175, 93, 156);
+    font-size: 6vh;
+    text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 1);
+}
+
+.opcoes{
+    font-weight: 800;
+    font-size: 1.5vh;
+    letter-spacing: -0.1vh;
+    text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 1);
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+    text-align: center;
+
+    position: fixed;
+    left: 6vh;
+    right: 1vh;
+    top: 1vh;
+
+    width: 18vh;
+    min-height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    background-color: rgb(110, 27, 91, 0.2);
+
+    display: none;
+}
+
+
+.linha{
+    display: flex;
+    width: 100%;
+    border: 1px solid rgb(255, 255, 255, 0.2);
+}
+
+.mostrarTentativas{
+    position: fixed;
+    left: 1vh;
+    right: 1vh;
+    top: 1vh;
+    font-weight: 800;
+    font-size: 2vh;
+    letter-spacing: -0.1vh;
+}
+
+.mostrarTentativas p{
+    width: 100%;
+    padding: 1.5vh;
+}
+
+.mostrarTentativas p:hover{
+    background-color: rgb(102, 22, 83);
+    cursor: pointer;
+}
+
+#menu{
+    user-select: none;
+    position: fixed;
+    left: 1vh;
+    top: 1vh;
+    width: 7vh;
+    color: white;
+    font-size: 5vh;
+    text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 1);
+    cursor: pointer;
+}
+
+
+#menu:hover{
+    color: rgb(102, 22, 83);
+}
+
+.mostrar{
+    display: flex;
+}
+
+.voltar{
+    position: fixed;
+    width: 100vh;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url("../imgs/fundo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: none;
+}
+
+.voltar h2{
+    display: flex;
+    text-align: center;
+    padding: 1vh;
+    max-width: 40vh;
+    margin-bottom: 5vh;
+    font-size: 4vh;
+}
+
+.voltar button{
+    letter-spacing: -0.4vh;
+    border: none;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+    text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 1);
+    margin: 2vh;
+    height: 8vh;
+    width: 40vh; 
+    font-size: 3vh;
+    font-weight: 800;
+    background-color: rgb(145, 53, 123, 0.5);
+    border-radius: 1.2vh;
+    font-family: 'Ocr', sans-serif;
+    cursor: pointer;
+}
+
+.voltar button:hover{
+    background-color: rgb(102, 22, 83, 0.5);
+
+}
+
+.pontuacao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 2vh;
+    top: 1vh;
+}
+
+.text{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+}
+
+#lockscore{
+    font-size: 2vh;
+    margin: 0.5vh;
+    display: flex;
+}
+
+#lockcoin{
+    font-size: 2vh;
+    margin: 0.5vh;
+    display: flex;
+}
+
+#storeIcon{
+    user-select: none;
+    width: 8vh;
+    color: white;
+    text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 1);
+    cursor: pointer;
+    margin-bottom: 1.3vh;
+}
+
+.lockCoinsIcon{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#lockCoinId{
+    margin-left: 1vh;
+    margin-top: 2.2vh;
+    width: 2.5vh;
+    height: 2.5vh;
+}
+
+
+/*JOGO TODO*/
+.faseJogo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+/*PARTE DA VITORIA*/
+.faseRespostaVenceu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+}
+
+.faseRespostaVenceu h2{
+    color: #00ff00;
+    font-weight: 800;
+    font-size: 5.5vh;
+    letter-spacing:  -0.5vh;
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+    font-family: 'Gotham Black', sans-serif;
+    text-align: center;
+}
+
+.faseRespostaVenceu h3{
+    text-align: center;
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.6);   
+    font-family: 'Gotham Black', sans-serif;
+    font-size: 3vh;
+    
+}
+
+.faseRespostaVenceu button{
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+    text-shadow: -0.1px 0.1px 2px rgba(0, 0, 0, 0.5);
+    letter-spacing: -0.2vh;
+    margin: 2vh;
+    margin-bottom: 0;
+    height: 10vh;
+    width: 40vh; 
+    font-size: 3.4vh;
+    font-weight: 800;
+    background-color: white;
+    border: none;
+    border-radius: 1.2vh;
+    font-family: 'Gotham Black', sans-serif;
+    color: black;
+    cursor: pointer;
+}
+
+.faseRespostaVenceu button:hover{
+    background-color: rgb(212, 195, 195);
+
+}
+
+.faseRespostaVenceu span{
+    color: #00ff00;
+
+}
+
+
+/*parte da derrota*/
+.faseRespostaPerdeu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+}
+
+.faseRespostaPerdeu span{
+    color: #ff0000;
+}
+
+.faseRespostaPerdeu h1{
+    color: #ff0000;
+    font-weight: 800;
+    font-size: 5.5vh;
+    letter-spacing: -0.5vh;
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+    font-family: 'Gotham Black', sans-serif;
+    text-align: center;
+}
+
+.faseRespostaPerdeu button{
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+    letter-spacing: -0.2vh;
+    text-shadow: -0.1px 0.1px 2px rgba(0, 0, 0, 0.5);
+    margin: 2vh;
+    margin-bottom: 0;
+    height: 10vh;
+    width: 40vh; 
+    font-size: 3.4vh;
+    font-weight: 800;
+    background-color: white;
+    border: none;
+    border-radius: 1.2vh;
+    font-family: 'Gotham Black', sans-serif;
+    color: black;
+    cursor: pointer;
+}
+
+.faseRespostaPerdeu button:hover{
+    background-color: rgb(212, 195, 195);
+
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+}
 
 
 
-
-  /* Estilos para telas grandes (por exemplo, desktops) 
+  /* Estilos para telas médias (por exemplo, tablets) */
+@media (min-width: 769px) and (max-width: 1024px) {
   
-    @media (min-width: 1025px) {
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+        margin-top: 0.8vh;
+        background: url("../imgs/fundo.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        transition: background-image 1.3s ease; 
     }
-    */
+    
+    .titulo{
+        text-align: center;
+        font-weight: 800;
+        margin: 0.8vh;
+        margin-bottom: 3vh;
+        font-size: 8.5vh;
+        letter-spacing:  -1.2vh;
+        text-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+        font-family: 'Gotham Black', sans-serif;
+    
+    }
+    
+    
+    .subtitulo2{
+        font-size: 2vh;
+        color: rgb(175, 93, 156);
+        font-weight: 800;
+        text-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+        letter-spacing: -0.2vh;
+        margin-top: 1vh;
+        text-align: center;
+    }
+    
+    .subtitulo3{
+        font-size: 2vh;
+        color: #e7e8e5;
+        font-weight: 800;
+        text-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+        letter-spacing: -0.2vh;
+        margin-bottom: 1vh;
+        text-align: center;
+    }
+    
+    
+    .entrada{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 2vh;
+    }
+    
+    input{
+        font-family: 'Gotham Black', sans-serif;
+        margin: 0.5vh;
+        color: rgb(175, 93, 156);
+        font-size: 6vh;
+        font-weight: bolder;
+        width: 9vh;
+        height: 9vh;
+        text-align: center;
+        border: none;
+        border-radius: 1vh;
+        box-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+        text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 0.5);
+        background-color: white;
+    }
+    
+    input:focus{
+        outline-style:solid;
+        outline-width: 0.5vh;
+        outline-color: rgb(175, 93, 156);
+    }
+    
+    
+    .buttonArea{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .buttonArea button{
+        box-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+        letter-spacing: -0.4vh;
+        text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 1);
+        margin: 1vh;
+        margin-bottom: 0;
+        height: 6.5vh;
+        width: 40vh; 
+        font-size: 3vh;
+        font-weight: 800;
+        background-color: rgb(175, 93, 156);
+        border: none;
+        border-radius: 1.2vh;
+        font-family: 'Gotham Black', sans-serif;
+    }
+    
+    #btn1{
+        background-color: rgb(175, 93, 156);
+        margin-bottom: 1vh;
+    
+    }
+    
+    #btn1:hover{
+        background-color: rgb(145, 53, 123);
+    
+        cursor: pointer;
+    }
+    
+    #btn-geraComb{
+        background-color: rgb(175, 93, 156);
+    }
+    
+    #btn-geraComb:hover{
+        background-color: rgb(145, 53, 123);
+    
+        cursor: pointer;
+    }
+    
+    .saida{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 2vh;
+    }
+    
+    .box{
+        color: rgb(175, 93, 156);
+        font-size: 6vh;
+        font-weight: bolder;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 9vh;
+        height: 9vh;
+        background-color: white;
+        margin: 0.5vh;
+        text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 0.5);
+        box-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+        font-family: 'Gotham Black', sans-serif;
+        border-radius: 1vh;
+    }
+    
+    .box2{
+        color: #ff0000;
+        font-size: 8vh;
+        font-weight: bolder;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 9vh;
+        height: 9vh;
+        background-color: white;
+        margin: 0.5vh;
+        text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 0.5);
+        box-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+        font-family: 'Gotham Black', sans-serif;
+        border-radius: 1vh;
+    }
+    
+    .box3{
+        color: #00ff00;
+        font-size: 8vh;
+        font-weight: bolder;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 9vh;
+        height: 9vh;
+        background-color: white;
+        margin: 0.5vh;
+        text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 0.5);
+        box-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+        font-family: 'Gotham Black', sans-serif;
+        border-radius: 1vh;
+    }
+    
+    span.material-symbols-outlined{
+        color: rgb(175, 93, 156);
+        font-size: 6vh;
+        text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 1);
+    }
+    
+    .opcoes{
+        font-weight: 800;
+        font-size: 1.5vh;
+        letter-spacing: -0.1vh;
+        text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 1);
+        box-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+        text-align: center;
+    
+        position: fixed;
+        left: 6vh;
+        right: 1vh;
+        top: 1vh;
+    
+        width: 18vh;
+        min-height: 10vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    
+        background-color: rgb(110, 27, 91, 0.2);
+    
+        display: none;
+    }
+    
+    
+    .linha{
+        display: flex;
+        width: 100%;
+        border: 1px solid rgb(255, 255, 255, 0.2);
+    }
+    
+    .mostrarTentativas{
+        position: fixed;
+        left: 1vh;
+        right: 1vh;
+        top: 1vh;
+        font-weight: 800;
+        font-size: 2vh;
+        letter-spacing: -0.1vh;
+    }
+    
+    .mostrarTentativas p{
+        width: 100%;
+        padding: 1.5vh;
+    }
+    
+    .mostrarTentativas p:hover{
+        background-color: rgb(102, 22, 83);
+        cursor: pointer;
+    }
+    
+    #menu{
+        user-select: none;
+        position: fixed;
+        left: 1vh;
+        top: 1vh;
+        width: 7vh;
+        color: white;
+        font-size: 5vh;
+        text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 1);
+        cursor: pointer;
+    }
+    
+    
+    #menu:hover{
+        color: rgb(102, 22, 83);
+    }
+    
+    .mostrar{
+        display: flex;
+    }
+    
+    .voltar{
+        position: fixed;
+        width: 100vh;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-image: url("../imgs/fundo.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        display: none;
+    }
+    
+    .voltar h2{
+        display: flex;
+        text-align: center;
+        padding: 1vh;
+        max-width: 40vh;
+        margin-bottom: 5vh;
+        font-size: 4vh;
+    }
+    
+    .voltar button{
+        letter-spacing: -0.4vh;
+        border: none;
+        box-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+        text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 1);
+        margin: 2vh;
+        height: 8vh;
+        width: 40vh; 
+        font-size: 3vh;
+        font-weight: 800;
+        background-color: rgb(145, 53, 123, 0.5);
+        border-radius: 1.2vh;
+        font-family: 'Ocr', sans-serif;
+        cursor: pointer;
+    }
+    
+    .voltar button:hover{
+        background-color: rgb(102, 22, 83, 0.5);
+    
+    }
+    
+    .pontuacao{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        right: 2vh;
+        top: 1vh;
+    }
+    
+    .text{
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: column;
+    }
+    
+    #lockscore{
+        font-size: 2vh;
+        margin: 0.5vh;
+        display: flex;
+    }
+    
+    #lockcoin{
+        font-size: 2vh;
+        margin: 0.5vh;
+        display: flex;
+    }
+    
+    #storeIcon{
+        user-select: none;
+        width: 8vh;
+        color: white;
+        text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 1);
+        cursor: pointer;
+        margin-bottom: 1.3vh;
+    }
+    
+    .lockCoinsIcon{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+    
+    #lockCoinId{
+        margin-left: 1vh;
+        margin-top: 2.2vh;
+        width: 2.5vh;
+        height: 2.5vh;
+    }
+    
+    
+    /*JOGO TODO*/
+    .faseJogo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    
+    /*PARTE DA VITORIA*/
+    .faseRespostaVenceu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        display: none;
+    }
+    
+    .faseRespostaVenceu h2{
+        color: #00ff00;
+        font-weight: 800;
+        font-size: 5.5vh;
+        letter-spacing:  -0.5vh;
+        text-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+        font-family: 'Gotham Black', sans-serif;
+        text-align: center;
+    }
+    
+    .faseRespostaVenceu h3{
+        text-align: center;
+        text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.6);   
+        font-family: 'Gotham Black', sans-serif;
+        font-size: 3vh;
+        
+    }
+    
+    .faseRespostaVenceu button{
+        box-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+        text-shadow: -0.1px 0.1px 2px rgba(0, 0, 0, 0.5);
+        letter-spacing: -0.2vh;
+        margin: 2vh;
+        margin-bottom: 0;
+        height: 10vh;
+        width: 40vh; 
+        font-size: 3.4vh;
+        font-weight: 800;
+        background-color: white;
+        border: none;
+        border-radius: 1.2vh;
+        font-family: 'Gotham Black', sans-serif;
+        color: black;
+        cursor: pointer;
+    }
+    
+    .faseRespostaVenceu button:hover{
+        background-color: rgb(212, 195, 195);
+    
+    }
+    
+    .faseRespostaVenceu span{
+        color: #00ff00;
+    
+    }
+    
+    
+    /*parte da derrota*/
+    .faseRespostaPerdeu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        display: none;
+    }
+    
+    .faseRespostaPerdeu span{
+        color: #ff0000;
+    }
+    
+    .faseRespostaPerdeu h1{
+        color: #ff0000;
+        font-weight: 800;
+        font-size: 5.5vh;
+        letter-spacing: -0.5vh;
+        text-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+        font-family: 'Gotham Black', sans-serif;
+        text-align: center;
+    }
+    
+    .faseRespostaPerdeu button{
+        box-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+        letter-spacing: -0.2vh;
+        text-shadow: -0.1px 0.1px 2px rgba(0, 0, 0, 0.5);
+        margin: 2vh;
+        margin-bottom: 0;
+        height: 10vh;
+        width: 40vh; 
+        font-size: 3.4vh;
+        font-weight: 800;
+        background-color: white;
+        border: none;
+        border-radius: 1.2vh;
+        font-family: 'Gotham Black', sans-serif;
+        color: black;
+        cursor: pointer;
+    }
+    
+    .faseRespostaPerdeu button:hover{
+        background-color: rgb(212, 195, 195);
+    
+    }
+    
+    .main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+       
+}
 
+
+
+
+
+  /* Estilos para telas grandes (por exemplo, desktops) */
+@media (min-width: 1025px) {
   
 body{
     display: flex;
@@ -521,5 +1466,5 @@ span.material-symbols-outlined{
     align-items: center;
     flex-direction: column;
 }
-
+}
 

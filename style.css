@@ -11,27 +11,138 @@
 }
 
 
-/* Estilos para telas pequenas (por exemplo, smartphones)
+/* Estilos para telas pequenas (por exemplo, smartphones) */
 @media (max-width: 768px) {
+    
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    margin-top: 0.8vh;
+    background: url("imgs/fundo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.titulo{
+    text-align: center;
+    font-weight: 800;
+    margin: 0.8vh;
+    margin-bottom: 2vh;
+    font-size: 8.8vh;
+    letter-spacing:  -1.2vh;
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+    font-family: 'Gotham Black', sans-serif;
 
 }
-*/
 
+.buttonArea{
+    background-color: rgb(255, 255, 255, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
-  /* Estilos para telas médias (por exemplo, tablets) 
-    @media (min-width: 769px) and (max-width: 1024px) {
+.buttonArea button{
+    letter-spacing: -0.3vh;
+    margin: 8vh;
+    margin-bottom: 0;
+    height: 7vh;
+    width: 40vh; 
+    font-size: 5vh;
+    font-weight: 800;
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+    color: #e7e8e5;
+    border: none;
+    border-radius: 1.2vh;
+    background-color: rgb(255,255,255,0);
+    font-family: 'Gotham Black', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonArea button:hover{
+    background-color: rgb(175, 93, 156);
+
+    cursor: pointer;
+}
 
 }
-  */
+
+
+  /* Estilos para telas médias (por exemplo, tablets)  */
+@media (min-width: 769px) and (max-width: 1024px) {
+        
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    margin-top: 0.8vh;
+    background: url("imgs/fundo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.titulo{
+    text-align: center;
+    font-weight: 800;
+    margin: 0.8vh;
+    margin-bottom: 2vh;
+    font-size: 8.8vh;
+    letter-spacing:  -1.2vh;
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+    font-family: 'Gotham Black', sans-serif;
+
+}
+
+.buttonArea{
+    background-color: rgb(255, 255, 255, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.buttonArea button{
+    letter-spacing: -0.3vh;
+    margin: 8vh;
+    margin-bottom: 0;
+    height: 7vh;
+    width: 40vh; 
+    font-size: 5vh;
+    font-weight: 800;
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+    color: #e7e8e5;
+    border: none;
+    border-radius: 1.2vh;
+    background-color: rgb(255,255,255,0);
+    font-family: 'Gotham Black', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonArea button:hover{
+    background-color: rgb(175, 93, 156);
+
+    cursor: pointer;
+}
+
+}
 
 
 
-/* Estilos para telas grandes (por exemplo, desktops) 
+/* Estilos para telas grandes (por exemplo, desktops) */
 @media (min-width: 1025px) {
-}
-
-*/
-   
+  
   
 body{
     display: flex;
@@ -89,3 +200,7 @@ body{
 
     cursor: pointer;
 }
+
+}
+
+ 

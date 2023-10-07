@@ -22,28 +22,207 @@
 }
 
 
-/* Estilos para telas pequenas (por exemplo, smartphones) 
+/* Estilos para telas pequenas (por exemplo, smartphones) */
 @media (max-width: 768px) {
+       
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 0.8vh;
+    background: url("../imgs/fundo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.titulo{
+    text-align: center;
+    font-weight: 800;
+    margin: 0.8vh;
+    margin-bottom: 3vh;
+    font-size: 9vh;
+    letter-spacing:  -1.2vh;
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+    font-family: 'Gotham Black', sans-serif;
 
 }
-*/
 
+h2{
+    text-align: center;
+    margin: 5vh;
+    margin-bottom: 15vh;
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+    font-size: 5vh;
+    font-family: 'Gotham Black', sans-serif;
+    letter-spacing: -0.5vh;
+}
 
-  /* Estilos para telas médias (por exemplo, tablets) 
-    @media (min-width: 769px) and (max-width: 1024px) {
+.instrucoes{
+    display: flex;
+    flex-direction: column;
+}
+
+.instrucoes h3{
+    margin: 1vh;
+    margin-left: 4vh;
+    font-size: 3vh;
+    font-family: 'Gotham Black', sans-serif;
+    letter-spacing: -0.5vh;
+    word-spacing: 1vh;
+}
+
+.instrucoes p{
+    margin-left: 3vh;
+    margin-bottom: 4vh;
+    font-size: 3vh;
+}
+
+.instrucoes img{
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    border: 1vh solid #e7e8e5;
+    border-radius: 2vh;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    width: 40vh;
+}
+
+.voltar{
+    position: fixed;
+    left: 2vh;
+    right: 0;
+    top: 2vh;
+    bottom: 0;
 
 }
-  */
+
+.voltar p{
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vh;
+    background-color: rgb(110, 27, 91, 0.2);
+    padding: 2.5vh;
+    max-width: 15vh;
+    font-family: 'Ocr';
+
+}
+
+.voltar p:hover{
+    background-color: rgb(102, 22, 83);
+    cursor: pointer;
+}
+
+}
+
+
+  /* Estilos para telas médias (por exemplo, tablets) */
+@media (min-width: 769px) and (max-width: 1024px) {
+        
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 0.8vh;
+    background: url("../imgs/fundo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.titulo{
+    text-align: center;
+    font-weight: 800;
+    margin: 0.8vh;
+    margin-bottom: 3vh;
+    font-size: 9vh;
+    letter-spacing:  -1.2vh;
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+    font-family: 'Gotham Black', sans-serif;
+
+}
+
+h2{
+    text-align: center;
+    margin: 5vh;
+    margin-bottom: 15vh;
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+    font-size: 5vh;
+    font-family: 'Gotham Black', sans-serif;
+    letter-spacing: -0.5vh;
+}
+
+.instrucoes{
+    display: flex;
+    flex-direction: column;
+}
+
+.instrucoes h3{
+    margin: 1vh;
+    margin-left: 4vh;
+    font-size: 3vh;
+    font-family: 'Gotham Black', sans-serif;
+    letter-spacing: -0.5vh;
+    word-spacing: 1vh;
+}
+
+.instrucoes p{
+    margin-left: 3vh;
+    margin-bottom: 4vh;
+    font-size: 3vh;
+}
+
+.instrucoes img{
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    border: 1vh solid #e7e8e5;
+    border-radius: 2vh;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    width: 40vh;
+}
+
+.voltar{
+    position: fixed;
+    left: 2vh;
+    right: 0;
+    top: 2vh;
+    bottom: 0;
+
+}
+
+.voltar p{
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vh;
+    background-color: rgb(110, 27, 91, 0.2);
+    padding: 2.5vh;
+    max-width: 15vh;
+    font-family: 'Ocr';
+
+}
+
+.voltar p:hover{
+    background-color: rgb(102, 22, 83);
+    cursor: pointer;
+}
+
+}
 
 
 
-/* Estilos para telas grandes (por exemplo, desktops)
+
+/* Estilos para telas grandes (por exemplo, desktops) */
 @media (min-width: 1025px) {
     
-  
-}
- */
-
 body{
     display: flex;
     justify-content: center;
@@ -133,3 +312,4 @@ h2{
     cursor: pointer;
 }
 
+}
