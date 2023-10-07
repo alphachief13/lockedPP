@@ -28,11 +28,11 @@ body{
 
 .titulo{
     text-align: center;
-    font-weight: 800;
+    font-weight: 900;
     margin: 0.8vh;
     margin-bottom: 2vh;
-    font-size: 8.8vh;
-    letter-spacing:  -0.7vh;
+    font-size: 9vh;
+    letter-spacing:  -0.4vh;
     text-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
     font-family: 'Gotham Black', sans-serif;
 
@@ -76,7 +76,7 @@ body{
 
   /* Estilos para telas médias (por exemplo, tablets)  */
 @media (min-width: 769px) and (max-width: 1024px) {
-   
+  
 body{
     display: flex;
     justify-content: center;
@@ -91,11 +91,11 @@ body{
 
 .titulo{
     text-align: center;
-    font-weight: 800;
+    font-weight: 900;
     margin: 0.8vh;
     margin-bottom: 2vh;
-    font-size: 8.8vh;
-    letter-spacing:  -0.7vh;
+    font-size: 9vh;
+    letter-spacing:  -0.4vh;
     text-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
     font-family: 'Gotham Black', sans-serif;
 
@@ -133,7 +133,6 @@ body{
 
     cursor: pointer;
 }
-
 
 }
 
