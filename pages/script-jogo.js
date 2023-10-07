@@ -43,8 +43,9 @@ let tentativas = 0;
 let numCorretos = [];
 let acertouUmNum = false;
 let emTelaMain = true;
+let consecutivo = false;
 
-
+let lockScoreConsecutivo = 0;
 let lockScore = 0;
 let lockCoin = 0;
 recuperaDados();
@@ -95,6 +96,21 @@ function voltaMain(){
     emTelaMain = true;
     
     comecarJogo();
+}
+
+function pararEConverterScore(){
+    lockCoin += parseInt(lockScore/25);
+    lockScore = 0;
+    lockScoreConsecutivo = 0;
+    atualizaLockCoin();
+    atualizaLockScore();
+   
+    voltaMain();
+}
+
+function continuarEMultiplicarScore(){
+    consecutivo = true;
+    voltaMain()
 }
 
 function mostraSaidaTela2(){
@@ -304,6 +320,11 @@ function perdeu(){
     mostraSaidaTela2();
     mostraSaidaTela3();
 
+    lockScore = 0;
+    lockScoreConsecutivo = 0;
+    consecutivo = false;
+    atualizaLockScore();
+
     //
     mostraTelaDerrota();
 }
@@ -325,13 +346,25 @@ function ganhou(){
     //
     mostraTelaVitoria();
 
-    if(tentativas == 4){
-        lockScore += 1000;
+    if(consecutivo){
+        lockScoreConsecutivo = lockScore;
+        if(tentativas == 4){
+            lockScore = 500;
+        } else{
+            lockScore = 50 * (tentativas + 1);
+        }
+
+        lockScore *= lockScoreConsecutivo;
         atualizaLockScore();
     } else{
-        lockScore += 25 * tentativas;
+        if(tentativas == 4){
+            lockScore += 500;
+        } else{
+            lockScore += 50 * (tentativas + 1);
+        }
         atualizaLockScore();
     }
+
 
 
 }
@@ -359,7 +392,7 @@ function analisarCombinacao(){
             perdeu()
         }
         else{
-            if(acertouUmNum && emJogo){
+            if(acertouUmNum && emJogo && numCorretos.length != 0){
                 atualizarLogSub3(4);
 
             } else{
@@ -385,7 +418,6 @@ function verificarSeNumeroEstaCerto(entrada, saida){
 
             if(!(numCorretos.includes(entrada[i]))){
                 //som de cadeado desbloqueado toca caso o numero não tenha sido descoberto ainda
-                atualizarLogSub3(4);
                 unlockedSound.play();
                 acertouUmNum = true;
 

@@ -3,6 +3,16 @@
     src: url('../fonts/gothanXlight.otf'); 
 }
 
+@font-face {
+    font-family: 'Gotham Black';
+    src: url('../fonts/gothamBlack.otf');
+}
+
+@font-face {
+    font-family: 'Ocr';
+    src: url('../fonts/ocr-a-std.otf');
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -59,12 +69,12 @@ body{
 }
 
 h2{
-    font-weight: 800vh;
     margin: 5vh;
     margin-bottom: 15vh;
     text-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
     font-size: 5vh;
-
+    font-family: 'Gotham Black', sans-serif;
+    letter-spacing: -0.5vh;
 }
 
 .instrucoes{
@@ -76,6 +86,9 @@ h2{
     margin: 1vh;
     margin-left: 4vh;
     font-size: 6vh;
+    font-family: 'Gotham Black', sans-serif;
+    letter-spacing: -0.5vh;
+    word-spacing: 1vh;
 }
 
 .instrucoes p{
@@ -100,7 +113,6 @@ h2{
     top: 2vh;
     bottom: 0;
 
-
 }
 
 .voltar p{
@@ -112,9 +124,12 @@ h2{
     background-color: rgb(110, 27, 91, 0.2);
     padding: 2.5vh;
     max-width: 15vh;
+    font-family: 'Ocr';
+
 }
 
 .voltar p:hover{
     background-color: rgb(102, 22, 83);
     cursor: pointer;
 }
+
