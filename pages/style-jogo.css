@@ -628,6 +628,7 @@ span.material-symbols-outlined{
 
 }
 .logTermo{
+    letter-spacing: -0.25vh;
     text-align: center;
     display: none;
 }
