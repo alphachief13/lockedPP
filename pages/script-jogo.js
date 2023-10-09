@@ -1,9 +1,3 @@
-//ainda falta corrigir cores ao acertar
-//fazer o sistema de score
-//fazer a pagina sobre
-
-
-
 const unlockedSound = new Audio('../sounds/unlocked.mp3');
 const loseSound = new Audio('../sounds/lose.wav');
 const lockSound = new Audio('../sounds/locking.wav')
@@ -22,6 +16,13 @@ const lockCoinEl = document.querySelector("#lockcoin");
 const boxSaida2 = document.querySelectorAll(".box2");
 const boxSaida3 = document.querySelectorAll(".box3");
 const mostrarLockScore = document.querySelector("#mostraLockScore");
+const item1 = document.querySelector("#item1");
+const item2 = document.querySelector("#item2");
+const item3 = document.querySelector("#item2");
+const termometro = document.querySelector(".termometro img");
+const logTermo = document.querySelectorAll(".logTermo");
+const lojaAviso = document.querySelector(".avisoLoja");
+
 const lojaTela = document.querySelector(".loja");
 const telaPrincipal = document.querySelector(".main");
 
@@ -46,18 +47,39 @@ let numCorretos = [];
 let acertouUmNum = false;
 let emTelaMain = true;
 let consecutivo = false;
+let temTermometro = false;
+let rodadaTermometro = false;
 
-
-//n°jogada, combinação, score, situação, tentativas usadas
-let todasTentativas = [
-
-]
+let todasTentativas = []
 
 let lockScoreConsecutivo = 0;
 let lockScore = 0;
 let lockCoin = 0;
 recuperaDados();
-recuperaTentativas
+recuperaTentativas();
+
+function comprouTermometro(){
+    localStorage.setItem('temTermometro', "true");
+    temTermometro = statusTermometro();
+
+}
+
+function usouTermometro(){
+    localStorage.setItem('temTermometro', "false");
+    temTermometro = statusTermometro();
+
+}
+
+function statusTermometro(){
+    let value = localStorage.getItem('temTermometro');
+    if(value == "true"){
+        termometro.style.display = "block"
+    }else{
+        termometro.style.display = "none";
+
+    }
+    return value
+}
 
 function armazenaTentativas(){
     let stringTodasTentativas = JSON.stringify(todasTentativas);
@@ -80,10 +102,11 @@ function recuperaDados(){
     atualizaLockCoin();
 }
 
-let possiveisLogs = ["COMBINAÇÃO INCORRETA", "COMBINAÇÃO CORRETA", "COMBINAÇÃO INVÁLIDA", "DIGITE UMA COMBINAÇÃO (0-9)", "VOCÊ ACERTOU UM NÚMERO"];
-let coresLogs = ["#ff0000","#00ff00","#ff0000","#e7e8e5", "#00ff00"];
+let possiveisLogs = ["COMBINAÇÃO INCORRETA", "COMBINAÇÃO CORRETA", "COMBINAÇÃO INVÁLIDA", "DIGITE UMA COMBINAÇÃO (0-9)", "VOCÊ ACERTOU UM NÚMERO", "PREENCHA A ENTRADA PARA USAR O TERMÔMETRO", "TERMÔMETRO UTILIZADO"];
+let coresLogs = ["#ff0000","#00ff00","#ff0000","#e7e8e5", "#00ff00", "#e7e8e5", "#e7e8e5"];
 
 function abrirLoja(){
+    lojaAviso.style.color = "rgb(228, 27, 27, 0)";
     telaPrincipal.style.opacity = "0.4";
     lojaTela.style.display = "flex";
 }
@@ -278,6 +301,8 @@ function atualizaElementosDomAoIniciar(){
 }
 
 function comecarJogo(){
+    removerEfeitoTermometro();
+    statusTermometro();
     emTelaMain = true;
     //reinicia a combinacao de numeros que são corretos na entrada
     numCorretos = [];
@@ -341,6 +366,7 @@ function testarCombinacaoAtual(){
 }
 
 function perdeu(){
+    rodadaTermometro = false;
     //o jogo acaba
     emJogo = false;
     //o botao de analisar é desativado  
@@ -370,6 +396,7 @@ function perdeu(){
 }
 
 function ganhou(){
+    rodadaTermometro = false
     //o jogo acaba
     emJogo = false;
     //o botao de analisar é desativado  
@@ -422,6 +449,9 @@ function analisarCombinacao(){
     analiseValida = verificarSeEntradaValida(receberValorEntrada());
 
     if(analiseValida){
+        if(rodadaTermometro){
+            usarTermometro();
+        }
         combinacoesSaoIguais = testarCombinacaoAtual();
 
         
@@ -478,7 +508,6 @@ function guardarTentativa(venceu){
 
     todasTentativas.push([combinacaoFormatada, lockScore, situacao]);
     armazenaTentativas();
-    console.log(todasTentativas);
 }
 
 function verificarSeNumeroEstaCerto(entrada, saida){
@@ -507,6 +536,75 @@ function verificarSeNumeroEstaCerto(entrada, saida){
 
 
 
+
+}
+
+function comprarTermometro(){
+
+    if(emJogo && lockCoin >= 15){
+        item1.style.display = "none"
+        termometro.style.display = "block"
+        fecharLoja();
+        lockCoin -= 15;
+        atualizaLockCoin();
+        comprouTermometro();
+    } else if(!(emJogo)){
+        lojaAviso.style.color = "rgb(228, 27, 27, 1)"
+        lojaAviso.innerHTML = "VOCÊ SÓ PODE COMPRAR ITENS DENTRO DE RODADAS"
+    } else if(emJogo && lockCoin < 15){
+        lojaAviso.style.color = "rgb(228, 27, 27, 1)"
+        lojaAviso.innerHTML = "VOCÊ NÃO POSSUI LOCKCOINS SUFICIENTES"
+    }
+    
+}
+
+function usarTermometro(){
+    rodadaTermometro = true;
+    let combEntrada = receberValorEntrada();
+    let combSaida = combinacaoSaida;
+    let entradaValida = verificarSeEntradaValida(combEntrada)
+    if(!(entradaValida)){
+        atualizarLogSub3(5)
+    }else{
+        for(let i = 0; i < combEntrada.length; i++){
+            combEntrada[i] = Number(combEntrada[i]);
+            combSaida[i] = Number(combSaida[i]);
+        }
+        atualizarLogSub3(6);
+        usouTermometro();
+
+
+        for(let i = 0; i < combEntrada.length; i++){
+            if(combEntrada[i] + 1 == combSaida[i] || combEntrada[i] + 2 == combSaida[i] || combEntrada[i] - 1 == combSaida[i] || combEntrada[i] - 2 == combSaida[i] || combEntrada[i] == combSaida[i]){
+
+                logTermo[i].style.display = "block";
+                logTermo[i].innerHTML = "quente"
+                boxSaida[i].style.backgroundColor = "#6643ab";
+    
+            } else if(combEntrada[i] + 3 == combSaida[i] || combEntrada[i] + 4 == combSaida[i] || combEntrada[i] - 3 == combSaida[i] || combEntrada[i] - 4 == combSaida[i] || combEntrada[i] + 5 == combSaida[i] || combEntrada[i] - 5 == combSaida[i]){
+                logTermo[i].style.display = "block";
+                logTermo[i].innerHTML = "morno"
+                boxSaida[i].style.backgroundColor = "#a341a8";
+            } else if(combEntrada[i] + 6 == combSaida[i] || combEntrada[i] + 7 == combSaida[i] || combEntrada[i] - 6 == combSaida[i] || combEntrada[i] - 7 == combSaida[i] || combEntrada[i] + 8 == combSaida[i] || combEntrada[i] - 8 == combSaida[i] || combEntrada[i] + 9 == combSaida[i] || combEntrada[i] - 9 == combSaida[i]){
+                logTermo[i].style.display = "block";
+                logTermo[i].innerHTML = "frio"
+                boxSaida[i].style.backgroundColor = "#f040a2";
+        }
+
+
+        }
+
+    }
+
+}
+
+function removerEfeitoTermometro(){
+    for(let i = 0; i < boxSaida.length; i++){
+        logTermo[i].style.display = "none";
+        logTermo[i].innerHTML = "---"
+        boxSaida[i].style.backgroundColor = "white";
+    }
+    item1.style.display = "block";
 
 }
 

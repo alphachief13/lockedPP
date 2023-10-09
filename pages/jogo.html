@@ -62,15 +62,30 @@
             </div>
         
             <div class="saida">
-                <div id="saida-1" class="box"><span class="material-symbols-outlined">
-                    lock_open
-                    </span></div>
-                <div id="saida-2" class="box"><span class="material-symbols-outlined">
-                    lock_open
-                    </span></div>
-                <div id="saida-3" class="box"><span class="material-symbols-outlined">
-                    lock_open
-                    </span></div>
+                <div class="b1">
+                    <div id="saida-1" class="box"><span class="material-symbols-outlined">
+                        lock_open
+                        </span>
+                    </div>
+                    <p class="logTermo">---</p>
+                </div>
+
+                <div class="b2">
+                    <div id="saida-2" class="box"><span class="material-symbols-outlined">
+                        lock_open
+                        </span></div>
+                    <p class="logTermo">---</p>
+
+                </div>
+
+                <div class="b3">
+                    <div id="saida-3" class="box"><span class="material-symbols-outlined">
+                        lock_open
+                        </span></div>
+                    <p class="logTermo">---</p>
+
+                </div>
+
         
             </div>
         
@@ -124,18 +139,37 @@
             </div>
         </div>
     
+        <div class="termometro">
+            <img onclick="usarTermometro()" src="../imgs/termometro.png">
+        </div>
+
+
     </div>
 
     <div class="loja">
         <p id="x-loja" onclick="fecharLoja()">x</p>
         <div class="titulo">
             <p id="loja-title">LOCKSTORE</p>
+            <p class="avisoLoja">VOCÊ SÓ PODE COMPRAR ITENS DENTRO DE RODADAS</p>
         </div>
         <div class="itensLoja">
-            <div class="item">
+            <div id="item1" class="item">
 
                 <div class="preco">
-                    <p id="valor">25</p>
+                    <p id="valor">15</p>
+                    <img src="../imgs/lockCoin.png">
+                </div>
+
+                <div class="conteudo">
+                    <p>termometro</p>
+                    <img onclick="comprarTermometro()" src="../imgs/termometro.png">
+                </div>
+
+            </div>
+            <div id="item2" class="item">
+
+                <div class="preco">
+                    <p id="valor">15</p>
                     <img src="../imgs/lockCoin.png">
                 </div>
 
@@ -145,23 +179,10 @@
                 </div>
 
             </div>
-            <div class="item">
+            <div id="item3" class="item">
 
                 <div class="preco">
-                    <p id="valor">25</p>
-                    <img src="../imgs/lockCoin.png">
-                </div>
-
-                <div class="conteudo">
-                    <p>termometro</p>
-                    <img src="../imgs/termometro.png">
-                </div>
-
-            </div>
-            <div class="item">
-
-                <div class="preco">
-                    <p id="valor">25</p>
+                    <p id="valor">15</p>
                     <img src="../imgs/lockCoin.png">
                 </div>
 
