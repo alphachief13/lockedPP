@@ -1,0 +1,427 @@
+@font-face {
+    font-family: 'Gotham Black';
+    src: url('../fonts/gothamBlack.otf'); 
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #e7e8e5;
+    font-family: 'Gotham Black';
+    
+}
+
+
+/* Estilos para telas pequenas (por exemplo, smartphones) */
+@media (max-width: 768px) {
+      
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url("../imgs/fundo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h2{
+    margin-top: 3vh;
+    margin-bottom: 6vh;
+    font-size: 3vh;
+    text-align: center;
+}
+
+.intro{
+    text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 1);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.titulo{
+    text-align: center;
+    font-weight: 800;
+    margin: 0.8vh;
+    margin-bottom: 2vh;
+    font-size: 8vh;
+    letter-spacing:  -0.3vh;
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+    font-family: 'Gotham Black', sans-serif;
+
+}
+
+.boxTentativa{
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+
+    background-color: rgb(175, 93, 156);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40vh;
+    height: 16vh;
+    margin: 3vh;
+    border-radius: 1vh;
+}
+
+.numeroJogada{
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-right: 2vh;
+}
+
+
+.content{
+
+    height: 100%;
+    width: 90%;
+    
+}
+
+.jogada{
+    color: #e7e8e5;
+    text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 1);
+    letter-spacing: -0.4vh;
+    word-spacing: 1vh;
+
+
+    font-size: 4vh;
+    margin-left: 2vh;
+}
+
+
+.situacao{
+    font-size: 3vh;
+    color: #e7e8e5;
+    text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 1);
+    letter-spacing: -0.1vh;
+    word-spacing: 1vh;
+
+
+
+}
+
+.combinacao{
+    font-size: 3vh;
+    color: #e7e8e5;
+    text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 1);
+    letter-spacing: -0.1vh;
+    word-spacing: 0.1vh;
+
+
+}
+
+.score{
+    font-size: 2.5vh;
+    color: #e7e8e5;
+    text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 1);
+    letter-spacing: -0.1vh;
+    word-spacing: 1vh;
+
+}
+
+
+
+.voltar {
+    position: fixed;
+    top: 2vh;
+    left: 2vh;
+    font-size: 3vh;
+    padding: 2vh;
+    background-color: rgb(110, 27, 91, 0.2);
+    color: #e7e8e5;
+    border-radius: 1vh;
+    cursor: pointer;
+    user-select: none;
+    font-family: 'Gotham Black', sans-serif;
+
+}
+
+.voltar:hover{
+    background-color: rgb(110, 27, 91, 0.5);
+}
+
+
+}
+
+
+  /* Estilos para telas médias (por exemplo, tablets)  */
+@media (min-width: 769px) and (max-width: 1024px) {
+        
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url("../imgs/fundo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h2{
+    margin-top: 3vh;
+    margin-bottom: 6vh;
+    font-size: 3vh;
+    text-align: center;
+}
+
+.intro{
+    text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 1);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.titulo{
+    text-align: center;
+    font-weight: 800;
+    margin: 0.8vh;
+    margin-bottom: 2vh;
+    font-size: 8vh;
+    letter-spacing:  -0.3vh;
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+    font-family: 'Gotham Black', sans-serif;
+
+}
+
+.boxTentativa{
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+
+    background-color: rgb(175, 93, 156);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40vh;
+    height: 16vh;
+    margin: 3vh;
+    border-radius: 1vh;
+}
+
+.numeroJogada{
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-right: 2vh;
+}
+
+
+.content{
+
+    height: 100%;
+    width: 90%;
+    
+}
+
+.jogada{
+    color: #e7e8e5;
+    text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 1);
+    letter-spacing: -0.4vh;
+    word-spacing: 1vh;
+
+
+    font-size: 4vh;
+    margin-left: 2vh;
+}
+
+
+.situacao{
+    font-size: 3vh;
+    color: #e7e8e5;
+    text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 1);
+    letter-spacing: -0.1vh;
+    word-spacing: 1vh;
+
+
+
+}
+
+.combinacao{
+    font-size: 3vh;
+    color: #e7e8e5;
+    text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 1);
+    letter-spacing: -0.1vh;
+    word-spacing: 0.1vh;
+
+
+}
+
+.score{
+    font-size: 2.5vh;
+    color: #e7e8e5;
+    text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 1);
+    letter-spacing: -0.1vh;
+    word-spacing: 1vh;
+
+}
+
+
+
+.voltar {
+    position: fixed;
+    top: 2vh;
+    left: 2vh;
+    font-size: 3vh;
+    padding: 2vh;
+    background-color: rgb(110, 27, 91, 0.2);
+    color: #e7e8e5;
+    border-radius: 1vh;
+    cursor: pointer;
+    user-select: none;
+    font-family: 'Gotham Black', sans-serif;
+
+}
+
+.voltar:hover{
+    background-color: rgb(110, 27, 91, 0.5);
+}
+
+
+}
+
+
+
+/* Estilos para telas grandes (por exemplo, desktops) */
+@media (min-width: 1025px) {
+  
+  
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url("../imgs/fundo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h2{
+    margin-top: 3vh;
+    margin-bottom: 6vh;
+    font-size: 4.5vh;
+}
+
+.intro{
+    text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 1);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.titulo{
+    text-align: center;
+    font-weight: 800;
+    margin: 0.8vh;
+    margin-bottom: 2vh;
+    font-size: 16vh;
+    letter-spacing:  -1.2vh;
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+    font-family: 'Gotham Black', sans-serif;
+
+}
+
+.boxTentativa{
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+
+    background-color: rgb(175, 93, 156);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vh;
+    height: 16vh;
+    margin: 3vh;
+    border-radius: 1vh;
+}
+
+.numeroJogada{
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-right: 2vh;
+}
+
+
+.content{
+
+    height: 100%;
+    width: 90%;
+    
+}
+
+.jogada{
+    color: #e7e8e5;
+    text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 1);
+    letter-spacing: -0.4vh;
+    word-spacing: 1vh;
+
+
+    font-size: 7vh;
+    margin-left: 2vh;
+}
+
+
+.situacao{
+    font-size: 4vh;
+    color: #e7e8e5;
+    text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 1);
+    letter-spacing: -0.4vh;
+    word-spacing: 1vh;
+
+
+
+}
+
+.combinacao{
+    font-size: 5vh;
+    color: #e7e8e5;
+    text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 1);
+    letter-spacing: -0.4vh;
+    word-spacing: 1vh;
+
+
+}
+
+.score{
+    font-size: 3.5vh;
+    color: #e7e8e5;
+    text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 1);
+    letter-spacing: -0.4vh;
+    word-spacing: 1vh;
+
+}
+
+
+
+.voltar {
+    position: fixed;
+    top: 2vh;
+    left: 2vh;
+    font-size: 3vh;
+    padding: 2vh;
+    background-color: rgb(110, 27, 91, 0.2);
+    color: #e7e8e5;
+    border-radius: 1vh;
+    cursor: pointer;
+    user-select: none;
+    font-family: 'Gotham Black', sans-serif;
+
+}
+
+.voltar:hover{
+    background-color: rgb(110, 27, 91, 0.5);
+}
+
+}

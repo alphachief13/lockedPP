@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,7 +12,7 @@
 
     <div class="main">
         <div class="pontuacao">
-            <img id="storeIcon" src="../imgs/lockStore.png"/>
+            <img id="storeIcon" src="../imgs/lockStore.png" onclick="abrirLoja()"/>
     
             <div class="text">
                 <p id="lockscore">LOCKSCORE: 0</p>
@@ -35,7 +35,7 @@
             <div class="opcoes">
                 <p id="tentAtual">PERFIL</p>
                 <div class="linha"></div>
-                <p>COMBINAÇÕES</p>
+                <p onclick="combinacoesPagina()">COMBINAÇÕES</p>
                 <div class="linha"></div>
                 <p onclick="mostraMenuVoltarOuVolta()">VOLTAR AO INÍCIO</p>
             </div>    
@@ -124,6 +124,55 @@
             </div>
         </div>
     
+    </div>
+
+    <div class="loja">
+        <p id="x-loja" onclick="fecharLoja()">x</p>
+        <div class="titulo">
+            <p id="loja-title">LOCKSTORE</p>
+        </div>
+        <div class="itensLoja">
+            <div class="item">
+
+                <div class="preco">
+                    <p id="valor">25</p>
+                    <img src="../imgs/lockCoin.png">
+                </div>
+
+                <div class="conteudo">
+                    <p>termometro</p>
+                    <img src="../imgs/termometro.png">
+                </div>
+
+            </div>
+            <div class="item">
+
+                <div class="preco">
+                    <p id="valor">25</p>
+                    <img src="../imgs/lockCoin.png">
+                </div>
+
+                <div class="conteudo">
+                    <p>termometro</p>
+                    <img src="../imgs/termometro.png">
+                </div>
+
+            </div>
+            <div class="item">
+
+                <div class="preco">
+                    <p id="valor">25</p>
+                    <img src="../imgs/lockCoin.png">
+                </div>
+
+                <div class="conteudo">
+                    <p>termometro</p>
+                    <img src="../imgs/termometro.png">
+                </div>
+
+            </div>
+
+        </div> 
     </div>
     
     <script src="script-jogo.js"></script>

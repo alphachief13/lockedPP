@@ -2,6 +2,7 @@ const jogarElement = document.querySelector("#jogar");
 const instrucoesElement = document.querySelector("#instrucoes");
 const contatoElement = document.querySelector("#contato");
 
+
 let color = "rgb(175, 93, 156)"
 let color2 = "rgb(145, 53, 123, 0)"
 

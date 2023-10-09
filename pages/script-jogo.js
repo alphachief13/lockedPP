@@ -22,6 +22,8 @@ const lockCoinEl = document.querySelector("#lockcoin");
 const boxSaida2 = document.querySelectorAll(".box2");
 const boxSaida3 = document.querySelectorAll(".box3");
 const mostrarLockScore = document.querySelector("#mostraLockScore");
+const lojaTela = document.querySelector(".loja");
+const telaPrincipal = document.querySelector(".main");
 
 const telaMain = document.querySelector(".faseJogo");
 const telaVitoria = document.querySelector(".faseRespostaVenceu");
@@ -45,10 +47,31 @@ let acertouUmNum = false;
 let emTelaMain = true;
 let consecutivo = false;
 
+
+//n°jogada, combinação, score, situação, tentativas usadas
+let todasTentativas = [
+
+]
+
 let lockScoreConsecutivo = 0;
 let lockScore = 0;
 let lockCoin = 0;
 recuperaDados();
+recuperaTentativas
+
+function armazenaTentativas(){
+    let stringTodasTentativas = JSON.stringify(todasTentativas);
+    localStorage.setItem('todasTentativas', stringTodasTentativas); 
+}
+
+function recuperaTentativas(){
+    if(todasTentativas){
+        let stringTodasTentativas = localStorage.getItem('todasTentativas');
+        todasTentativas = JSON.parse(stringTodasTentativas);
+    }
+
+}
+
 
 function recuperaDados(){
     lockScore = Number(localStorage.getItem('lockScore'));
@@ -59,6 +82,20 @@ function recuperaDados(){
 
 let possiveisLogs = ["COMBINAÇÃO INCORRETA", "COMBINAÇÃO CORRETA", "COMBINAÇÃO INVÁLIDA", "DIGITE UMA COMBINAÇÃO (0-9)", "VOCÊ ACERTOU UM NÚMERO"];
 let coresLogs = ["#ff0000","#00ff00","#ff0000","#e7e8e5", "#00ff00"];
+
+function abrirLoja(){
+    telaPrincipal.style.opacity = "0.4";
+    lojaTela.style.display = "flex";
+}
+
+function fecharLoja(){
+    telaPrincipal.style.opacity = "1";
+    lojaTela.style.display = "none";
+}
+
+function combinacoesPagina(){
+    window.location.href = "combinacoes.html";
+}
 
 function carregarTodosFundos(){
     atualizaBackground(imgPerdeu);
@@ -325,7 +362,10 @@ function perdeu(){
     consecutivo = false;
     atualizaLockScore();
 
-    //
+    //armazena essa tentativa
+    guardarTentativa(false);
+
+
     mostraTelaDerrota();
 }
 
@@ -365,6 +405,8 @@ function ganhou(){
         atualizaLockScore();
     }
 
+    //armazena essa tentativa
+    guardarTentativa(true);
 
 
 }
@@ -387,9 +429,11 @@ function analisarCombinacao(){
         if(combinacoesSaoIguais){
             atualizarLogSub3(1)
             ganhou();
+
         } else if(tentativas == 0 && emJogo){
             atualizarLogSub3(0);
-            perdeu()
+            perdeu();
+
         }
         else{
             if(acertouUmNum && emJogo && numCorretos.length != 0){
@@ -406,6 +450,35 @@ function analisarCombinacao(){
     }
 
 
+}
+
+function guardarTentativa(venceu){
+    let situacao;
+    let tentativasUsadas = 5 - tentativas;
+    let combinacaoFormatada = `${combinacaoSaida[0]} - ${combinacaoSaida[1]} - ${combinacaoSaida[2]}`;
+
+
+
+    if(venceu){
+        if(tentativasUsadas === 1){
+            situacao = "VITÓRIA EM" + " " + tentativasUsadas + " TENTATIVA";
+        } else{
+            situacao = "VITÓRIA EM" + " " + tentativasUsadas + " TENTATIVAS";
+        }
+
+    } else{
+        situacao = "PERDEU";
+
+    }
+
+    recuperaTentativas();
+    if (!todasTentativas) {
+        todasTentativas = [];
+    }
+
+    todasTentativas.push([combinacaoFormatada, lockScore, situacao]);
+    armazenaTentativas();
+    console.log(todasTentativas);
 }
 
 function verificarSeNumeroEstaCerto(entrada, saida){
@@ -462,7 +535,7 @@ boxEntrada.forEach((input, index) => {
     } else if (event.key === 'd' && index < boxEntrada.length - 1) {
         boxEntrada[index + 1].focus();
     } else if(event.key === "Backspace" && boxEntrada[index].value.length < 2 && index > 0){
-       setTimeout(()=>{boxEntrada[index - 1].focus();}, 1)
+       setTimeout(()=>{boxEntrada[index - 1].focus();}, 10)
        
     }
 })

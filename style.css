@@ -148,7 +148,6 @@ body{
     align-items: center;
     height: 100vh;
     flex-direction: column;
-    margin-top: 0.8vh;
     background: url("imgs/fundo.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -175,29 +174,23 @@ body{
 }
 
 .buttonArea button{
-    letter-spacing: -0.3vh;
-    margin: 8vh;
+    letter-spacing: -0.4vh;
+    text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 1);
+    margin: 6vh;
     margin-bottom: 0;
-    height: 7vh;
+    height: 8vh;
     width: 60vh; 
     font-size: 5vh;
     font-weight: 800;
-    text-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
-    color: #e7e8e5;
+    background-color: rgb(145, 53, 123, 0);
     border: none;
     border-radius: 1.2vh;
-    background-color: rgb(255,255,255,0);
     font-family: 'Gotham Black', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.buttonArea button:hover{
-    background-color: rgb(175, 93, 156);
-
     cursor: pointer;
+
 }
+
+
 
 }
 

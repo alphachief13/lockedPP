@@ -100,23 +100,24 @@ h2{
 }
 
 .voltar p{
-    font-weight: 800;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2vh;
+    position: fixed;
+    top: 2vh;
+    left: 2vh;
+    font-size: 3vh;
+    padding: 2vh;
     background-color: rgb(110, 27, 91, 0.2);
-    padding: 2.5vh;
-    max-width: 15vh;
-    font-family: 'Ocr';
+    color: #e7e8e5;
+    border-radius: 1vh;
+    cursor: pointer;
     user-select: none;
+    font-family: 'Gotham Black', sans-serif;
 
 }
 
 .voltar p:hover{
-    background-color: rgb(102, 22, 83);
-    cursor: pointer;
+    background-color: rgb(110, 27, 91, 0.5);
 }
+
 
 }
 
@@ -199,23 +200,24 @@ h2{
 }
 
 .voltar p{
-    font-weight: 800;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2vh;
+    position: fixed;
+    top: 2vh;
+    left: 2vh;
+    font-size: 3vh;
+    padding: 2vh;
     background-color: rgb(110, 27, 91, 0.2);
-    padding: 2.5vh;
-    max-width: 15vh;
-    font-family: 'Ocr';
+    color: #e7e8e5;
+    border-radius: 1vh;
+    cursor: pointer;
     user-select: none;
+    font-family: 'Gotham Black', sans-serif;
 
 }
 
 .voltar p:hover{
-    background-color: rgb(102, 22, 83);
-    cursor: pointer;
+    background-color: rgb(110, 27, 91, 0.5);
 }
+
 
 }
 
@@ -286,32 +288,24 @@ h2{
     margin: 10vh;
 }
 
-.voltar{
-    position: fixed;
-    left: 2vh;
-    right: 0;
-    top: 2vh;
-    bottom: 0;
-
-}
-
 .voltar p{
-    font-weight: 800;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2.5vh;
+    position: fixed;
+    top: 2vh;
+    left: 2vh;
+    font-size: 3vh;
+    padding: 2vh;
     background-color: rgb(110, 27, 91, 0.2);
-    padding: 2.5vh;
-    max-width: 15vh;
-    font-family: 'Ocr';
+    color: #e7e8e5;
+    border-radius: 1vh;
+    cursor: pointer;
     user-select: none;
+    font-family: 'Gotham Black', sans-serif;
 
 }
 
 .voltar p:hover{
-    background-color: rgb(102, 22, 83);
-    cursor: pointer;
+    background-color: rgb(110, 27, 91, 0.5);
 }
+
 
 }
