@@ -46,16 +46,22 @@
         align-items: center;
         flex-direction: column;
     }
-
     .cheats input{
         text-align: center;
+        box-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+        letter-spacing: -0.2vh;
+        text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 1);
         margin: 2vh;
         border: none;
-        height: 5vh;
-        width: 40vh;
-        font-size: 3vh;
-        color: rgb(139, 40, 116);
+        height: 6.8vh;
+        width: 53vh;         
+        font-size: 4vh;
+        font-weight: 800;
+        border-radius: 1.2vh;
+        color: rgb(255, 255, 255);
         font-weight: 700;
+        background-color: rgb(175, 93, 156);
+
     }
 
     .cheats input:focus{
@@ -63,24 +69,42 @@
     }
 
     .cheats button{
+        box-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+        letter-spacing: -0.2vh;
+        text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 1);
+        margin: 1vh;
+        margin-bottom: 0;
+        height: 6.8vh;
+        width: 53vh; 
+        font-size: 4vh;
+        font-weight: 800;
+        background-color: rgb(175, 93, 156);
         border: none;
-        width: 12vh;
-        height: 5vh;
-        font-size: 3vh;
-        color: rgb(139, 40, 116);
-        font-weight: 700;
-        background-color: black;
+        border-radius: 1.2vh;
+        font-family: 'Gotham Black', sans-serif;
+        cursor: pointer;
+    }
+
+    .cheats button:hover{
+        background-color: rgba(155, 71, 135)
+
     }
 
     #cheatInput{
         text-align: center;
+        box-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+        letter-spacing: -0.2vh;
+        text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 1);
         margin: 2vh;
         border: none;
-        height: 5vh;
-        width: 40vh;
-        font-size: 3vh;
-        color: rgb(139, 40, 116);
+        height: 6.8vh;
+        width: 53vh;         
+        font-size: 4vh;
+        font-weight: 800;
+        border-radius: 1.2vh;
+        color: rgb(255, 255, 255);
         font-weight: 700;
+        background-color: rgb(175, 93, 156);
         display: none;
     }
     
@@ -124,13 +148,20 @@
 
     .cheats input{
         text-align: center;
+        box-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+        letter-spacing: -0.2vh;
+        text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 1);
         margin: 2vh;
         border: none;
-        height: 5vh;
-        width: 40vh;
-        font-size: 3vh;
-        color: rgb(139, 40, 116);
+        height: 6.8vh;
+        width: 53vh;         
+        font-size: 4vh;
+        font-weight: 800;
+        border-radius: 1.2vh;
+        color: rgb(255, 255, 255);
         font-weight: 700;
+        background-color: rgb(175, 93, 156);
+
     }
 
     .cheats input:focus{
@@ -138,24 +169,42 @@
     }
 
     .cheats button{
+        box-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+        letter-spacing: -0.2vh;
+        text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 1);
+        margin: 1vh;
+        margin-bottom: 0;
+        height: 6.8vh;
+        width: 53vh; 
+        font-size: 4vh;
+        font-weight: 800;
+        background-color: rgb(175, 93, 156);
         border: none;
-        width: 12vh;
-        height: 5vh;
-        font-size: 3vh;
-        color: rgb(139, 40, 116);
-        font-weight: 700;
-        background-color: black;
+        border-radius: 1.2vh;
+        font-family: 'Gotham Black', sans-serif;
+        cursor: pointer;
+    }
+
+    .cheats button:hover{
+        background-color: rgba(155, 71, 135)
+
     }
 
     #cheatInput{
         text-align: center;
+        box-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+        letter-spacing: -0.2vh;
+        text-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 1);
         margin: 2vh;
         border: none;
-        height: 5vh;
-        width: 40vh;
-        font-size: 3vh;
-        color: rgb(139, 40, 116);
+        height: 6.8vh;
+        width: 53vh;         
+        font-size: 4vh;
+        font-weight: 800;
+        border-radius: 1.2vh;
+        color: rgb(255, 255, 255);
         font-weight: 700;
+        background-color: rgb(175, 93, 156);
         display: none;
     }
     
