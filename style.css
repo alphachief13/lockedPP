@@ -83,7 +83,7 @@ body{
     align-items: center;
     height: 100vh;
     flex-direction: column;
-    background: url("imgs/rtf.png");
+    background: url("imgs/fundo.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -148,7 +148,7 @@ body{
     align-items: center;
     height: 100vh;
     flex-direction: column;
-    background: url("imgs/rtf.png");
+    background: url("imgs/fundo.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
