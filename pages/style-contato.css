@@ -1,6 +1,103 @@
-body{
-    background: url("../imgs/contato.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+@font-face {
+    font-family: 'Gotham Black';
+    src: url('../fonts/gothamBlack.otf');
 }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gotham Xlight', sans-serif;
+    color: #e7e8e5;
+}
+
+/* Estilos para telas pequenas (por exemplo, smartphones) */
+@media (max-width: 768px) {
+    body{
+        background: url("../imgs/contato.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    .voltar p{
+        position: fixed;
+        top: 2vh;
+        left: 2vh;
+        font-size: 3vh;
+        padding: 2vh;
+        background-color: rgb(110, 27, 91, 0.2);
+        color: #e7e8e5;
+        border-radius: 1vh;
+        cursor: pointer;
+        user-select: none;
+        font-family: 'Gotham Black', sans-serif;
+    
+    }
+    
+    .voltar p:hover{
+        background-color: rgb(110, 27, 91, 0.5);
+    }
+}
+
+
+  /* Estilos para telas médias (por exemplo, tablets)  */
+@media (min-width: 769px) and (max-width: 1024px) {
+    body{
+        background: url("../imgs/contato.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    .voltar p{
+        position: fixed;
+        top: 2vh;
+        left: 2vh;
+        font-size: 3vh;
+        padding: 2vh;
+        background-color: rgb(110, 27, 91, 0.2);
+        color: #e7e8e5;
+        border-radius: 1vh;
+        cursor: pointer;
+        user-select: none;
+        font-family: 'Gotham Black', sans-serif;
+    
+    }
+    
+    .voltar p:hover{
+        background-color: rgb(110, 27, 91, 0.5);
+    }
+}
+
+
+
+/* Estilos para telas grandes (por exemplo, desktops) */
+@media (min-width: 1025px) {
+    body{
+        background: url("../imgs/contato.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    .voltar p{
+        position: fixed;
+        top: 2vh;
+        left: 2vh;
+        font-size: 3vh;
+        padding: 2vh;
+        background-color: rgb(110, 27, 91, 0.2);
+        color: #e7e8e5;
+        border-radius: 1vh;
+        cursor: pointer;
+        user-select: none;
+        font-family: 'Gotham Black', sans-serif;
+    
+    }
+    
+    .voltar p:hover{
+        background-color: rgb(110, 27, 91, 0.5);
+    }
+}
+
+ 
