@@ -238,6 +238,8 @@ span.material-symbols-outlined{
 
     background-color: rgb(110, 27, 91, 0.2);
 
+    user-select: none;
+
     display: none;
 }
 
@@ -1467,6 +1469,7 @@ span.material-symbols-outlined{
     flex-direction: column;
 
     background-color: rgb(110, 27, 91, 0.2);
+    user-select: none;
 
     display: none;
 }

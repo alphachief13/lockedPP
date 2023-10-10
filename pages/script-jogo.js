@@ -328,7 +328,7 @@ function comecarJogo(){
     //fala que o jogo começou
     emJogo = true;
     //reinicia o numero de tentativas
-    tentativas = 5;
+    tentativas = 6;
     atualizaElementosDomAoIniciar();
     //gera a combinação e guarda na variavel global que guarda a combinacao correta
     combinacaoSaida = gerarCombinacao();
