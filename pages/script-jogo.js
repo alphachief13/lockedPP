@@ -159,6 +159,7 @@ function voltaMain(){
 }
 
 function pararEConverterScore(){
+    consecutivo = false;
     lockCoin += parseInt(lockScore/25);
     lockScore = 0;
     lockScoreConsecutivo = 0;
@@ -632,12 +633,27 @@ boxEntrada.forEach((input, index) => {
 
     } else if (event.key === 'd' && index < boxEntrada.length - 1) {
         boxEntrada[index + 1].focus();
-    } else if(event.key === "Backspace" && boxEntrada[index].value.length < 2 && index > 0){
-       setTimeout(()=>{boxEntrada[index - 1].focus();}, 10)
-       
-    }
+    } 
 })
 })
+
+boxEntrada.forEach((input, index) => {
+    input.addEventListener('keydown', function(event) {
+      if (event.key === 'Backspace' && index > 0 && this.value === '') {
+        // Verifica se a tecla "Backspace" foi pressionada,
+        // se o índice é maior que 0 e se o valor atual está vazio
+  
+        // Apaga o valor do input atual
+        this.value = '';
+  
+        // Move o foco para o input à esquerda
+        boxEntrada[index - 1].focus();
+        
+        // Impede o comportamento padrão do "Backspace" (navegar para a página anterior)
+        event.preventDefault();
+      }
+    });
+  });
 
 document.addEventListener('keydown', function(event){
     if(event.key === "Enter" && emTelaMain){
