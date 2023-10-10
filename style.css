@@ -28,11 +28,12 @@ body{
 
 .titulo{
     text-align: center;
-    font-weight: 900;
+    font-weight: 800;
     margin: 0.8vh;
-    margin-bottom: 2vh;
+    margin-bottom: 3vh;
+    margin-top: 8vh;
     font-size: 9vh;
-    letter-spacing:  -0.4vh;
+    letter-spacing:  -0.5vh;
     text-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
     font-family: 'Gotham Black', sans-serif;
 

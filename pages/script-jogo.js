@@ -215,9 +215,23 @@ function atualizarLogSub3(i){
 }
 
 function atualizaBackground(src){
-    const body = document.body
-    body.style.transition = "background-image 1.3s ease"
-    body.style.backgroundImage = "url(" + src + ")"
+    const screenWidth = window.innerWidth;
+    if (screenWidth < 768) {
+        if(src == imgVenceu){
+
+        } else if(src == imgPerdeu){
+
+        } else if(src == imgDefault){
+            const body = document.body
+            body.style.transition = "background-image 1.3s ease"
+            document.body.style.backgroundImage = 'url("../imgs/rtf.png")';
+        }
+    } else{
+        const body = document.body
+        body.style.transition = "background-image 1.3s ease"
+        body.style.backgroundImage = "url(" + src + ")"
+    }
+
 }
 
 function mostrarCombinacoes(){
