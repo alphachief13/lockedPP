@@ -14,6 +14,10 @@ function instrucoes(){
     window.location.href = "pages/instrucoes.html";
 }
 
+function contato(){
+    window.location.href = "pages/contato.html"
+}
+
 jogarElement.addEventListener('mouseover', ()=>{
     jogarElement.style.backgroundColor = color
     instrucoesElement.style.backgroundColor = color2
