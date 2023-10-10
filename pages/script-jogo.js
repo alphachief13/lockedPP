@@ -58,6 +58,10 @@ let lockCoin = 0;
 recuperaDados();
 recuperaTentativas();
 
+function abaPerfil(){
+    window.location.href = "perfil.html"
+}
+
 function comprouTermometro(){
     localStorage.setItem('temTermometro', "true");
     temTermometro = statusTermometro();
@@ -417,18 +421,18 @@ function ganhou(){
     if(consecutivo){
         lockScoreConsecutivo = lockScore;
         if(tentativas == 4){
-            lockScore = 500;
+            lockScore = 1200;
         } else{
-            lockScore = 50 * (tentativas + 1);
+            lockScore = 200 * (tentativas + 1);
         }
 
         lockScore *= lockScoreConsecutivo;
         atualizaLockScore();
     } else{
         if(tentativas == 4){
-            lockScore += 500;
+            lockScore += 1200;
         } else{
-            lockScore += 50 * (tentativas + 1);
+            lockScore += 200 * (tentativas + 1);
         }
         atualizaLockScore();
     }

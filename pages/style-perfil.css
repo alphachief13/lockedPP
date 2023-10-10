@@ -1,0 +1,236 @@
+@font-face {
+    font-family: 'Gotham Black';
+    src: url('../fonts/gothamBlack.otf');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gotham Xlight', sans-serif;
+    color: #e7e8e5;
+}
+
+
+/* Estilos para telas pequenas (por exemplo, smartphones) */
+@media (max-width: 768px) {
+    body{
+        background: url("../imgs/fundo.png");
+    }
+    .voltar p{
+        position: fixed;
+        top: 2vh;
+        left: 2vh;
+        font-size: 3vh;
+        padding: 2vh;
+        background-color: rgb(110, 27, 91, 0.2);
+        color: #e7e8e5;
+        border-radius: 1vh;
+        cursor: pointer;
+        user-select: none;
+        font-family: 'Gotham Black', sans-serif;
+    
+    }
+    
+    .voltar p:hover{
+        background-color: rgb(110, 27, 91, 0.5);
+    }
+
+    .cheats{
+        margin: 10vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .cheats input{
+        text-align: center;
+        margin: 2vh;
+        border: none;
+        height: 5vh;
+        width: 40vh;
+        font-size: 3vh;
+        color: rgb(139, 40, 116);
+        font-weight: 700;
+    }
+
+    .cheats input:focus{
+        outline: none;
+    }
+
+    .cheats button{
+        border: none;
+        width: 12vh;
+        height: 5vh;
+        font-size: 3vh;
+        color: rgb(139, 40, 116);
+        font-weight: 700;
+        background-color: black;
+    }
+
+    #cheatInput{
+        text-align: center;
+        margin: 2vh;
+        border: none;
+        height: 5vh;
+        width: 40vh;
+        font-size: 3vh;
+        color: rgb(139, 40, 116);
+        font-weight: 700;
+        display: none;
+    }
+    
+    #cheatInput:focus{
+        outline: none;
+    }
+}
+
+
+  /* Estilos para telas médias (por exemplo, tablets)  */
+@media (min-width: 769px) and (max-width: 1024px) {
+    body{
+        background: url("../imgs/fundo.png");
+    }
+    .voltar p{
+        position: fixed;
+        top: 2vh;
+        left: 2vh;
+        font-size: 3vh;
+        padding: 2vh;
+        background-color: rgb(110, 27, 91, 0.2);
+        color: #e7e8e5;
+        border-radius: 1vh;
+        cursor: pointer;
+        user-select: none;
+        font-family: 'Gotham Black', sans-serif;
+    
+    }
+    
+    .voltar p:hover{
+        background-color: rgb(110, 27, 91, 0.5);
+    }
+
+    .cheats{
+        margin: 10vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .cheats input{
+        text-align: center;
+        margin: 2vh;
+        border: none;
+        height: 5vh;
+        width: 40vh;
+        font-size: 3vh;
+        color: rgb(139, 40, 116);
+        font-weight: 700;
+    }
+
+    .cheats input:focus{
+        outline: none;
+    }
+
+    .cheats button{
+        border: none;
+        width: 12vh;
+        height: 5vh;
+        font-size: 3vh;
+        color: rgb(139, 40, 116);
+        font-weight: 700;
+        background-color: black;
+    }
+
+    #cheatInput{
+        text-align: center;
+        margin: 2vh;
+        border: none;
+        height: 5vh;
+        width: 40vh;
+        font-size: 3vh;
+        color: rgb(139, 40, 116);
+        font-weight: 700;
+        display: none;
+    }
+    
+    #cheatInput:focus{
+        outline: none;
+    }
+
+}
+
+@media (min-width: 1025px) {
+    body{
+        background: url("../imgs/fundo.png");
+    }
+    .voltar p{
+        position: fixed;
+        top: 2vh;
+        left: 2vh;
+        font-size: 3vh;
+        padding: 2vh;
+        background-color: rgb(110, 27, 91, 0.2);
+        color: #e7e8e5;
+        border-radius: 1vh;
+        cursor: pointer;
+        user-select: none;
+        font-family: 'Gotham Black', sans-serif;
+    
+    }
+    
+    .voltar p:hover{
+        background-color: rgb(110, 27, 91, 0.5);
+    }
+
+    .cheats{
+        margin: 10vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .cheats input{
+        text-align: center;
+        margin: 2vh;
+        border: none;
+        height: 5vh;
+        width: 40vh;
+        font-size: 3vh;
+        color: rgb(139, 40, 116);
+        font-weight: 700;
+    }
+
+    .cheats input:focus{
+        outline: none;
+    }
+
+    .cheats button{
+        border: none;
+        width: 12vh;
+        height: 5vh;
+        font-size: 3vh;
+        color: rgb(139, 40, 116);
+        font-weight: 700;
+        background-color: black;
+    }
+
+    #cheatInput{
+        text-align: center;
+        margin: 2vh;
+        border: none;
+        height: 5vh;
+        width: 40vh;
+        font-size: 3vh;
+        color: rgb(139, 40, 116);
+        font-weight: 700;
+        display: none;
+    }
+    
+    #cheatInput:focus{
+        outline: none;
+    }
+}
