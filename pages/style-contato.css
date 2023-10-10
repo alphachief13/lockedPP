@@ -14,7 +14,7 @@
 /* Estilos para telas pequenas (por exemplo, smartphones) */
 @media (max-width: 768px) {
     body{
-        background: url("../imgs/contato-mobile.png");
+        background: url("../imgs/fundo-contato-mobile.png");
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
@@ -23,8 +23,8 @@
         position: fixed;
         top: 2vh;
         left: 2vh;
-        font-size: 3vh;
-        padding: 2vh;
+        font-size: 2.5vh;
+        padding: 1.5vh;
         background-color: rgb(110, 27, 91, 0.2);
         color: #e7e8e5;
         border-radius: 1vh;
@@ -37,6 +37,151 @@
     .voltar p:hover{
         background-color: rgb(110, 27, 91, 0.5);
     }
+    .mobile{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .mobile h1{
+        line-height: 5.2vh;
+        text-align: center;
+        font-weight: 800;
+        margin-top: 10vh;
+        margin-bottom: 7vh;
+        font-size: 6.5vh;
+        letter-spacing:  -0.5vh;
+        text-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+        font-family: 'Gotham Black', sans-serif;
+    
+    }
+    
+    .areaBranca{
+        display: flex;
+        height: 50vh;
+        width: 50vh;
+    }
+
+    .areaEmail{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 50%;
+    }
+
+    .areaEmail img{
+        width: 10vh;
+        height: 11vh;
+        
+    }
+
+    .areaEmail h2{
+        margin: 2vh;    
+        text-align: center;
+        font-weight: 900;
+        font-size: 4vh;
+        color: rgb(81,2,82);
+        letter-spacing:  -0.2vh;
+        
+    }
+
+    #algumaDuvida{
+        color: rgb(151,118,151);
+        font-weight: 800;
+        letter-spacing:  -0.2vh;
+        font-size: 3vh;
+        line-height: 3vh;
+
+    }
+
+    #emailText{
+        margin-top: 2vh;
+        margin-bottom: 11vh;
+        color: rgb(81,2,82);
+        font-weight: 800;
+        letter-spacing:  -0.2vh;
+        line-height: 3vh;
+
+    }
+
+    .areaEmail h3{
+        color: rgb(151,118,151);
+        font-size: 3vh;
+        height: 10vh;
+        width: 20vh;
+
+    }
+
+
+    .areaTelefone{
+        width: 50%;
+        
+    }
+
+    .imgEmail{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .imgTelefone{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 3vh;
+    }
+
+    .areaTelefone img{
+        margin-top: 2vh;
+        width: 7vh;
+        height: 7vh;
+        margin-bottom: 1vh;
+    }
+
+    .areaTelefone h2{
+        margin: 2vh;
+        color: rgb(81,2,82);
+        font-weight: 800;
+        letter-spacing:  -0.2vh;
+        font-size: 3.7vh;
+    }
+
+    .areaTelefone h3{
+        font-size: 3vh;
+        line-height: 3vh;
+        margin: 2vh;
+        color: rgb(151,118,151);
+        font-weight: 800;
+        letter-spacing:  -0.2vh;
+    }
+
+    .areaTelefone h3 pre{
+        font-size: 3vh;
+        margin-top: 2vh;
+        color: rgb(81,2,82);
+        font-weight: 800;
+        letter-spacing:  -0.3vh;
+        line-height: 3vh;
+
+    }
+
+    .nomes{
+        background-color: rgb(81,2,82);
+        height: 3vh;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+    }
+
+    .nomes h2{
+        text-align: center;
+        font-weight: 800;
+        font-size: 2.1vh;
+    }
+
 }
 
 
@@ -66,6 +211,10 @@
     
     .voltar p:hover{
         background-color: rgb(110, 27, 91, 0.5);
+    }
+
+    .mobile{
+        display: none;
     }
 }
 
@@ -97,6 +246,11 @@
     
     .voltar p:hover{
         background-color: rgb(110, 27, 91, 0.5);
+    }
+
+    
+    .mobile{
+        display: none;
     }
 }
 
