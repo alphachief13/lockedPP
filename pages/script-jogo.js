@@ -195,6 +195,7 @@ function mostraSaidaTela3(){
 
 function mostraMenuVoltarOuVolta(){
     if(emJogo){
+        termometro.style.display = "none";
         voltarMenu.style.display = "flex";
     } else{
         window.location.href = "../index.html";
@@ -202,7 +203,8 @@ function mostraMenuVoltarOuVolta(){
 }
 
 function voltarJogo(){
-       voltarMenu.style.display = "none"
+    termometro.style.display = "block";
+    voltarMenu.style.display = "none"
 }
 
 function voltarInicio(){
