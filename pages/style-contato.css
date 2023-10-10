@@ -14,7 +14,7 @@
 /* Estilos para telas pequenas (por exemplo, smartphones) */
 @media (max-width: 768px) {
     body{
-        background: url("../imgs/contato.png");
+        background: url("../imgs/contato-mobile.png");
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
@@ -43,7 +43,7 @@
   /* Estilos para telas médias (por exemplo, tablets)  */
 @media (min-width: 769px) and (max-width: 1024px) {
     body{
-        background: url("../imgs/contato.png");
+        background: url("../imgs/contato-mobile.png");
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
